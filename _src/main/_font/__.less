@@ -1,0 +1,15 @@
+// Main font is Catesque (loaded from local site), but italic font is Playfair Display (loaded from Google Fonts)
+// That means, all itelics are made with Playfair, which is used as italic font inside Catesque text blocks
+// As we cannot change Playfair
+// So we load local Catesque under the name of Playfair Display to have the same font-family for both fonts
+@_f__common__name: 'Playfair Display';
+@_f__common: @_f__common__name, Arial, Helvetica, FreeSans, sans-serif;
+
+// Icons font generated and used within _icon component
+@_f__icons__name: 'icons';
+@_f__icons: @_f__icons__name;
+
+// Font weight values used in project
+@_f__weight_normal: 400;
+@_f__weight_bold: 700;
+@_f__weight_black: 900;

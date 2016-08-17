@@ -1,0 +1,29 @@
+@import '../_color/__';
+
+
+@_l__phone1__width-min: 320px;
+@_l__phone1__width-max: (@_l__phone2__width-min - 1px);
+@_l__phone2__width-min: 375px;
+@_l__phone2__width-max: (@_l__desktop1__width-min - 1px);
+@_l__desktop1__width-min: 1024px;
+@_l__desktop1__width-max: (@_l__desktop2__width-min - 1px);
+@_l__desktop2__width-min: 1440px;
+
+@_l__phone__height-max: (@_l__desktop__height-min - 1);
+@_l__desktop__height-min: 600px;
+
+@_l__phone__media: ~'screen and (max-width: @{_l__phone2__width-max}), screen and (max-height: @{_l__phone__height-max})';
+@_l__phone1__media: ~'screen and (max-width: @{_l__phone1__width-max}), screen and (max-height: @{_l__phone__height-max})';
+@_l__phone2__media: ~'screen and (min-width: @{_l__phone2__width-min}) and (max-width: @{_l__phone2__width-max})';
+
+@_l__desktop__media: ~'screen and (min-width: @{_l__desktop1__width-min}) and (min-height: @{_l__desktop__height-min})';
+@_l__desktop1__media: ~'screen and (min-width: @{_l__desktop1__width-min}) and (max-width: @{_l__desktop1__width-max}) and (min-height: @{_l__desktop__height-min})';
+@_l__desktop2__media: ~'screen and (min-width: @{_l__desktop2__width-min}) and (min-height: @{_l__desktop__height-min})';
+
+@_l__viewport-stroke-size: 4px;
+@_l__viewport-stroke-style: solid;
+@_l__viewport-stroke-color: @_c__black;
+@_l__viewport-stroke: @_l__viewport-stroke-size @_l__viewport-stroke-style @_l__viewport-stroke-color;
+
+@_l__desktop__content-offset-x: 3%;
+@_l__desktop__content-width: 100% - (2 * @_l__desktop__content-offset-x);

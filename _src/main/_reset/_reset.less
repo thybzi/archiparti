@@ -1,0 +1,135 @@
+@import '__';
+
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+}
+
+// Disable font-size adjust on mobile
+html {
+    -webkit-text-size-adjust: 100%;
+}
+
+// Disable tapped highlight
+body {
+    //-webkit-tap-highlight-color: transparent;
+}
+
+// Disable default focus outline
+:focus {
+    //outline: 0;
+}
+
+header, footer, nav, section, article, main, aside, figure, figcaption, mark,
+div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, ul, ol, li, blockquote, pre,
+a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd,
+q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd,
+fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, br {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    text-decoration: none;
+}
+
+// MSIE and Android Browser doesn't have block style for main element
+main {
+    display: block;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+}
+
+cite {
+    font-style: normal;
+}
+
+ol, ul, li {
+    list-style: none;
+}
+
+body {
+    line-height: 1;
+}
+
+blockquote,
+q {
+    quotes: none;
+
+    &:before,
+    &:after {
+        content: '';
+        content: none;
+    }
+}
+
+a {
+    color: inherit;
+}
+
+a img {
+    border: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+// Disable iOS ahadow and WebKit default style for inputs
+input[type='text'],
+input[type='password'],
+input[type='email'],
+input[type='search'] {
+    -webkit-appearance: none;
+}
+
+// Disable search input special WebKit styles
+input[type='search'] {
+
+    &::-webkit-search-decoration {
+        -webkit-appearance: none;
+    }
+
+    &::-webkit-search-cancel-button {
+        display: none;
+    }
+}
+
+// Disable input clear cross in IE
+input {
+
+    &::-ms-clear {
+        width: 0;
+        height: 0;
+        opacity: 0;
+    }
+}
+
+button {
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+    width: auto;
+    overflow: visible;
+}
+
+// Disable Firefox default button inner padding
+button,
+input[type='submit'],
+input[type='reset'],
+input[type='button'] {
+
+    &::-moz-focus-inner {
+        border: 0;
+        padding: 0;
+    }
+}

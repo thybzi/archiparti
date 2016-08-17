@@ -1,0 +1,4 @@
+<% _.each(glyphs, function(glyph) {
+%>@_i__<%= glyph.name %>: '\<%= glyph.codepoint.toString(16) %>';
+<%
+}); %>

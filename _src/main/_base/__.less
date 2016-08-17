@@ -1,0 +1,204 @@
+@import '../_color/__';
+
+
+@ultra-length: 20000px;
+
+
+/**
+ * Applies "grater-alike" tiled circles background pattern
+ * @param {color=transparent}
+ */
+.grater-pattern(@bgcolor: transparent, @color: @_c__black, @pattern-width: 12px, @pattern-height: 20px) {
+    @half-width: @pattern-width / 2;
+    @half-height: @pattern-height / 2;
+    @stop1: 16%;
+    @stop2: @stop1 + 1%;
+
+    & {
+        background: @bgcolor;
+        background:
+            radial-gradient(circle at 100% 50%, @color @stop1, @bgcolor @stop2),
+            radial-gradient(circle at 0% 50%, @color @stop1, @bgcolor @stop2),
+            radial-gradient(circle at 100% 50%, @color @stop1, @bgcolor @stop2) @half-width @half-height,
+            radial-gradient(circle at 0% 50%, @color @stop1, @bgcolor @stop2) @half-width @half-height;
+        background-size: @pattern-width @pattern-height;
+    }
+}
+
+
+/**
+ * Enumerate asset used only in markup via fake selector and fake CSS property
+ * Allows postcss-url to process its URL and copy asset
+ * After that, fake selector is removed by css-byebye
+ * @param {url} url-rule Accepts value in format: url(path/to/asset) for better IDE experience
+ * @example
+ *     .my-component {
+ *         .markup-asset(url(images/mypic.png));
+ *     }
+ */
+.markup-asset(@url-rule) {
+
+    :markup-asset {
+        use: @url-rule;
+    }
+}
+
+/**
+ * Hides text in element, moving it away from view zone
+ * @uses text-indent
+ * @uses overflow
+ */
+.hide-text {
+    overflow: hidden;
+    text-align: left;
+    text-indent: -@ultra-length;
+}
+
+.text-overflow-ellipsis() {
+    overflow: hidden;
+    white-space: nowrap;
+    //-o-text-overflow: ellipsis; // Opera 9.0 - 10.6
+    text-overflow: ellipsis;
+}
+
+
+
+/**
+ * Apply position value, and 0 to 4 offset values
+ * Offsets (length or `auto`) are treated similar to `padding` value
+ * Any of offsets may be `null`, in that case it is counted but not used
+ * @example .position(absolute, 5px, 2px)       // position: absolute, 5px for top and bottom, 2px for left and right
+ * @example .position(relative, 5px, 2px, 3px)  // position: relative, top: 5px, bottom: 3px, 2px for left and right
+ * @example .position(fixed, 5px, 2px, null)    // position: fixed, top: 5px, nothing for bottom, 2px for left and right
+ * @example .position(static)                   // applies just `position: static` (without any offsets)
+ */
+.position(@value, @offsets...) when (iskeyword(@value)) {
+    @count: length(@offsets);
+
+    & {
+        position: @value;
+    }
+
+    & when (@count >= 4) {
+        .offset(left, extract(@offsets, 4));
+        .offset(right, extract(@offsets, 2));
+        .offset(top, extract(@offsets, 1));
+        .offset(bottom, extract(@offsets, 3));
+    }
+
+    & when (@count = 3) {
+        @left-right: extract(@offsets, 2);
+        .offset(left, @left-right);
+        .offset(right, @left-right);
+        .offset(top, extract(@offsets, 1));
+        .offset(bottom, extract(@offsets, 3));
+    }
+
+    & when (@count = 2) {
+        @left-right: extract(@offsets, 2);
+        @top-bottom: extract(@offsets, 1);
+        .offset(left, @left-right);
+        .offset(right, @left-right);
+        .offset(top, @top-bottom);
+        .offset(bottom, @top-bottom);
+    }
+
+    & when (@count = 1) {
+        .offset(left, @offsets);
+        .offset(right, @offsets);
+        .offset(top, @offsets);
+        .offset(bottom, @offsets);
+    }
+
+    .offset(@side, @value) when (isnumber(@value)), (@value = auto) {
+        @{side}: @value;
+    }
+}
+
+/**
+ * Apply `position: absolute`, and 0 to 4 offset values
+ * Offsets (length or `auto`) are treated similar to `padding` value
+ * Any of offsets may be `null`, in that case it is counted but not used
+ * @example .absolute(5px, 2px)       // applies 5px for top and bottom, 2px for left and right
+ * @example .absolute(5px, 2px, 3px)  // applies 5px for top, 3px for bottom, 2px for left and right
+ * @example .absolute(5px, 2px, null) // applies 5px for top, nothing for bottom, 2px for left and right
+ * @example .absolute()               // applies just `position: absolute` (without any offsets)
+ */
+.absolute(@offsets...) {
+    .position(absolute, @offsets);
+}
+
+/**
+ * Apply `position: fixed`, and 0 to 4 offset values
+ * Offsets (length or `auto`) are treated similar to `padding` value
+ * Any of offsets may be `null`, in that case it is counted but not used
+ * @example .fixed(5px, 2px)       // applies 5px for top and bottom, 2px for left and right
+ * @example .fixed(5px, 2px, 3px)  // applies 5px for top, 3px for bottom, 2px for left and right
+ * @example .fixed(5px, 2px, null) // applies 5px for top, nothing for bottom, 2px for left and right
+ * @example .fixed()               // applies just `position: fixed` (without any offsets)
+ */
+.fixed(@offsets...) {
+    .position(fixed, @offsets);
+}
+
+/**
+ * Apply `position: relative`, and 0 to 4 offset values
+ * Offsets (length or `auto`) are treated similar to `padding` value
+ * Any of offsets may be `null`, in that case in is counted but not used
+ * @example .relative(5px, 2px)       // applies 5px for top and bottom, 2px for left and right
+ * @example .relative(5px, 2px, 3px)  // applies 5px for top, 3px for bottom, 2px for left and right
+ * @example .relative(5px, 2px, null) // applies 5px for top, nothing for bottom, 2px for left and right
+ * @example .relative()               // applies just `position: relative` (without any offsets)
+ */
+.relative(@offsets...) {
+    .position(relative, @offsets);
+}
+
+
+/**
+ * Applies parent and child size half-difference to CSS property provided
+ * Value is rounded to NEAREST integer, then multiplied by factor (if provided)
+ * @param {keyword} property CSS property name
+ * @param {length} parent-size Greater (parent) size
+ * @param {length} child-size Smaller (child) size
+ * @param {number=1} [factor] Value multiplier, if needed
+ * @example hdiff(margin-top, 34px, 16px)  // => margin-top: 8px
+ * @example hdiff(margin-top, 34px, 17px)  // => margin-top: 9px
+ * @example hdiff(top, 34px, 17px, -1)     // => top: -9px
+ * @example hdiff(top, 34px, 17px)         // => top: 9px
+ */
+.hdiff(@property, @parent-size, @child-size, @factor: 1) {
+    @{property}: @factor * round((@parent-size - @child-size) / 2);
+}
+
+/**
+ * Applies parent and child size half-difference to CSS property provided
+ * Value is rounded to BIGGER integer, then multiplied by factor (if provided)
+ * @param {keyword} property CSS property name
+ * @param {length} parent-size Greater (parent) size
+ * @param {length} child-size Smaller (child) size
+ * @param {number=1} [factor] Value multiplier, if needed
+ * @example hdiff-ceil(margin-top, 34px, 16px)  // => margin-top: 8px
+ * @example hdiff-ceil(margin-top, 34px, 17px)  // => margin-top: 9px
+ * @example hdiff-ceil(top, 34px, 17px)         // => top: 9px
+ * @example hdiff-ceil(top, 34px, 17px, -1)     // => top: -9px
+ */
+.hdiff-ceil(@property, @parent-size, @child-size, @factor: 1) {
+    @{property}: @factor * ceil((@parent-size - @child-size) / 2);
+}
+
+/**
+ * Applies parent and child size half-difference to CSS property provided
+ * Value is rounded to SMALLER integer, then multiplied by factor (if provided)
+ * @param {keyword} property CSS property name
+ * @param {length} parent-size Greater (parent) size
+ * @param {length} child-size Smaller (child) size
+ * @param {number=1} [factor] Value multiplier, if needed
+ * @example hdiff-floor(margin-top, 34px, 16px)  // => margin-top: 8px
+ * @example hdiff-floor(margin-top, 34px, 17px)  // => margin-top: 8px
+ * @example hdiff-floor(top, 34px, 17px)         // => top: 8px
+ * @example hdiff-floor(top, 34px, 17px, -1)     // => top: -8px
+ */
+.hdiff-floor(@property, @parent-size, @child-size, @factor: 1) {
+    @{property}: @factor * floor((@parent-size - @child-size) / 2);
+}

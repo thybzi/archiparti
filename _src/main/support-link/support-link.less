@@ -1,0 +1,19 @@
+@import '__';
+
+.support-link {
+    .fixed(null, null, @support-link__offset, @support-link__offset);
+    z-index: @_z__support-link;
+    width: @support-link__size;
+    height: @support-link__size;
+    border-radius: 50%;
+    background-color: fade(@_c__black, 80%);
+    .hide-text();
+
+    &::after {
+        .absolute(10px, 0, null);
+        text-align: center;
+        text-indent: 0;
+        ._icon > .use(@_i__support, @support-link__icon-height);
+        color: @_c__white;
+    }
+}

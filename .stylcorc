@@ -1,0 +1,38 @@
+{
+    "basedir": "_src/main",
+    "file_ext": ".less",
+    "import_rule": "@import",
+    "import_with_ext": false,
+    "append_to_buildfile": true,
+    "allow_buildfile_outside_basedir": true,
+    "use_semicolons": true,
+    "quote": "'",
+    "indent": "    ",
+    "newline": "\n",
+    "ensure_trailing_newline": true,
+    "file_write_options": "utf8",
+    "virtual_component_prefix": "_",
+    "files": {
+        ".": {
+            "filename": "{{NAME}}",
+            "imports": ["_"],
+            "import_extend_source": true,
+            "content": "{{NEWLINE}}.{{NAME}} {{{NEWLINE}}{{INDENT}}// your code here{{NEWLINE}}}",
+            "no_virtual": ["content"]
+        },
+        "_": {
+            "filename": "__",
+            "imports": [],
+            "import_extend_source": false,
+            "content": "{{IMPORT}} {{QUOTE}}../_{{QUOTE}};",
+            "no_virtual": ["content"]
+        },
+        "%": {
+            "filename": "%",
+            "imports": ["."],
+            "import_extend_source": false,
+            "content": null,
+            "no_virtual": false
+        }
+    }
+}

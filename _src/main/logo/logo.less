@@ -1,0 +1,23 @@
+@import '__';
+
+.logo {
+    position: fixed;
+    left: 50%;
+    z-index: @_z__logo;
+    width: @logo__width;
+    margin-left: -(round(@logo__width / 2));
+    text-align: center;
+    font-weight: @_f__weight_black;
+    font-size: 20px;
+    line-height: 17px;
+    color: @_c__red2;
+    text-transform: lowercase;
+
+    @media @_l__phone__media {
+        top: 30px;
+    }
+
+    @media @_l__desktop__media {
+        top: 37px;
+    }
+}

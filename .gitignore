@@ -1,0 +1,8 @@
+node_modules/
+npm-debug.log
+Gemfile.lock
+_site/
+.jekyll-metadata
+.tmp/
+_src/main/_icon/fonts/
+_src/main/_icon/_icon__constants.less

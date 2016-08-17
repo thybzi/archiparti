@@ -1,0 +1,28 @@
+@import '__';
+
+.subscribe-block {
+    display: block;
+    z-index: @_z__subscribe-block;
+    box-sizing: border-box;
+    height: @subscribe-block__height;
+    margin-top: @subscribe-block__offset-top;
+    .hdiff(padding-top, @subscribe-block__inner-height, @subscribe-block__line-height);
+    border: @subscribe-block__stroke-size solid @_c__black;
+    text-align: center;
+    font-size: @subscribe-block__font-size;
+    line-height: @subscribe-block__line-height;
+    font-weight: @_f__weight_bold;
+    background-color: @_c__yellow1;
+
+    @media @_l__phone__media {
+        position: relative;
+        margin-left: -@subscribe-block__stroke-size;
+        margin-right: -@subscribe-block__stroke-size;
+    }
+
+    @media @_l__desktop__media {
+        position: relative;
+        margin-left: -@_l__desktop__content-offset-x;
+        margin-right: -@_l__desktop__content-offset-x;
+    }
+}

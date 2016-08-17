@@ -1,0 +1,46 @@
+@import '__';
+@import '../_base/__';
+
+
+// Playfair Display
+@import (css) url(https://fonts.googleapis.com/css?family=Playfair+Display:400i,700i);
+
+// MyFonts counters for Catesque fonts
+@import (css) url(//hello.myfonts.net/count/30c503);
+@import (css) url(//hello.myfonts.net/count/31cbeb);
+
+// Catesque-Light
+@font-face {
+    font-family: @_f__common__name;
+    font-weight: @_f__weight_normal; // Catesque Light (300) is used instead of Regular (400)
+    font-style: normal;
+    src:
+        local('☺︎'),
+        url(fonts/31CBEB_0_0.woff2) format('woff2'),
+        url(fonts/31CBEB_0_0.woff) format('woff'),
+        url(fonts/31CBEB_0_0.ttf) format('truetype');
+}
+
+// Catesque-Bold
+@font-face {
+    font-family: @_f__common__name;
+    font-weight: @_f__weight_bold;
+    font-style: normal;
+    src:
+        local('☺︎'),
+        url(fonts/30C503_1_0.woff2) format('woff2'),
+        url(fonts/30C503_1_0.woff) format('woff'),
+        url(fonts/30C503_1_0.ttf) format('truetype');
+}
+
+// Catesque-Black
+@font-face {
+    font-family: @_f__common__name;
+    font-weight: @_f__weight_black;
+    font-style: normal;
+    src:
+        local('☺︎'),
+        url(fonts/30C503_0_0.woff2) format('woff2'),
+        url(fonts/30C503_0_0.woff) format('woff'),
+        url(fonts/30C503_0_0.ttf) format('truetype');
+}

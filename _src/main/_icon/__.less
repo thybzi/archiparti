@@ -1,0 +1,29 @@
+@import '_icon__constants';
+@import '../_font/__';
+
+._icon {
+
+    //**
+    //* Apply icon (to pseudo element, span etc.)
+    //* @param {string} icon Icon constant (one of listed here: _src/main/_icon/_icon_constants.less)
+    //* @param {length=null} icon-height Icon height
+    //* @param {length=@icon-height} [line-height] Line height value, if different from icon height
+    //*/
+    .use(@icon, @icon-height: null, @line-height: @icon-height) {
+        content: @icon;
+        font-family: @_f__icons;
+        font-style: normal;
+        font-weight: normal;
+        speak: none;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+
+        & when (isnumber(@icon-height)) {
+            font-size: @icon-height;
+        }
+
+        & when (isnumber(@line-height)) {
+            line-height: @line-height;
+        }
+    }
+}
