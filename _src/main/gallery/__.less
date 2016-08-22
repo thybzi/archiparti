@@ -2,3 +2,38 @@
 
 @gallery__mobile__block-offset: 10px;
 @gallery__mobile__item-gap: @gallery__mobile__block-offset;
+
+
+/* Mixins */
+.gallery {
+
+    /**
+     * @mixin Sets sizing for desktop gallery
+     * @param {number} item-width-unit-count Number of gallery width units (columns) per row
+     * @param {length} item-height Height of item
+     * @param {length} item-height Vertical and horizontal gaps/offsets between and around items
+     */
+    .desktop-sizing(@item-width-unit-count, @item-height, @item-gap) {
+        @item-width-unit: 100% / @item-width-unit-count;
+        @item-gap-half: round(@item-gap / 2);
+
+        .list {
+            margin-left: @item-gap-half;
+            margin-right: @item-gap-half;
+        }
+
+        .item {
+            height: @item-height;
+            margin-bottom: @item-gap;
+            border-width: 0 @item-gap-half;
+
+            &:not(.double) {
+                width: @item-width-unit;
+            }
+
+            &.double {
+                width: 2 * @item-width-unit;
+            }
+        }
+    }
+}

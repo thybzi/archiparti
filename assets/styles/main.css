@@ -317,6 +317,15 @@ body.news {
     margin-left: 30px;
   }
 }
+/* Mixins */
+.gallery {
+  /**
+     * @mixin Sets sizing for desktop gallery
+     * @param {number} item-width-unit-count Number of gallery width units (columns) per row
+     * @param {length} item-height Height of item
+     * @param {length} item-height Vertical and horizontal gaps/offsets between and around items
+     */
+}
 .gallery .item {
   position: relative;
 }
@@ -484,23 +493,12 @@ body.news {
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    margin-left: 5px;
-    margin-right: 5px;
   }
   .gallery .item {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    height: 250px;
-    margin-bottom: 10px;
-    border-width: 0 5px;
     border-style: solid;
     border-color: transparent;
-  }
-  .gallery .item:not(.double) {
-    width: 25%;
-  }
-  .gallery .item.double {
-    width: 50%;
   }
   .gallery .item.complex:not(.double) .caption {
     position: absolute;
@@ -533,6 +531,36 @@ body.news {
     position: absolute;
     left: 153px;
     bottom: 30px;
+  }
+  .gallery:not(.loose) .list {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  .gallery:not(.loose) .item {
+    height: 250px;
+    margin-bottom: 10px;
+    border-width: 0 5px;
+  }
+  .gallery:not(.loose) .item:not(.double) {
+    width: 25%;
+  }
+  .gallery:not(.loose) .item.double {
+    width: 50%;
+  }
+  .gallery.loose .list {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .gallery.loose .item {
+    height: 305px;
+    margin-bottom: 20px;
+    border-width: 0 10px;
+  }
+  .gallery.loose .item:not(.double) {
+    width: 33.33333333%;
+  }
+  .gallery.loose .item.double {
+    width: 66.66666667%;
   }
 }
 .logo {
