@@ -1,0 +1,66 @@
+@import '__';
+
+.collaborate-block {
+    position: relative; // @todo overlap html::before
+
+    .image {
+        display: block;
+        box-sizing: border-box;
+        width: @collaborate-block__image__block-size;
+        height: @collaborate-block__image__block-size;
+        border: @collaborate-block__image__stroke-size solid @_c__black;
+        border-radius: 50%;
+        overflow: hidden;
+
+        img {
+            display: block;
+            width: @collaborate-block__image__image-size;
+            height: @collaborate-block__image__image-size;
+        }
+    }
+
+    .text {
+        width: @collaborate-block__text__width;
+        font-size: 13px;
+        line-height: 22px;
+    }
+
+    .links {
+        margin-top: 36px;
+
+        li + li {
+            margin-top: 14px;
+        }
+
+        a {
+            border-bottom: 1px solid @_c__black;
+            font-weight: @_f__weight_bold;
+            font-size: 13px;
+            line-height: 17px;
+        }
+    }
+
+    @media @_l__desktop__media {
+        width: @collaborate-block__desktop__width;
+        margin-left: @collaborate-block__desktop__offset-left;
+
+        .text {
+            margin-top: 17px;
+        }
+    }
+
+    @media @_l__phone__media {
+        @image__offset-right: 73px;
+
+        & {
+            position: relative;
+            margin-left: @collaborate-block__phone__offset-x;
+            margin-right: @collaborate-block__phone__offset-x;
+            padding-left: @collaborate-block__image__image-size + @image__offset-right;
+        }
+
+        .image {
+            .absolute(0, null, null, 0);
+        }
+    }
+}

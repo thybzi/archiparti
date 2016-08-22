@@ -1,0 +1,46 @@
+@import '__';
+
+.page-intro-block {
+    position: relative; // @todo overlap html::before
+    color: @_c__black;
+
+    .title {
+        font-size: 12px;
+        line-height: 17px;
+    }
+
+    @media @_l__desktop__media {
+
+        & {
+            margin-left: @page-intro-block__desktop__offset-left;
+            margin-top: @page-intro-block__desktop__offset-top;
+        }
+
+        .title {
+            margin-bottom: 13px;
+        }
+
+        .text {
+            font-size: 40px;
+            line-height: 60px;
+        }
+    }
+
+
+    @media @_l__phone__media {
+
+        & {
+            max-width: 312px;
+            margin: @page-intro-block__phone__offset-top @page-intro-block__phone__offset-x 90px;
+        }
+
+        .title {
+            margin-bottom: 22px;
+        }
+
+        .text {
+            font-size: 28px;
+            line-height: 55px;
+        }
+    }
+}

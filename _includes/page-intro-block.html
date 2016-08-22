@@ -1,0 +1,4 @@
+<div class="page-intro-block {% if include.with_collaborate %}with-collaborate{% endif %}">
+    <h1 class="title">{% if include.title %}{{ include.title }}{% else %}{{ page.title }}{% endif %}</h1>
+    <div class="text">{% if include.text %}{{ include.text }}{% else %}{{ page.intro_text }}{% endif %}</div>
+</div>

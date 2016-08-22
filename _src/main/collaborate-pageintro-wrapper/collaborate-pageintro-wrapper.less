@@ -1,0 +1,28 @@
+@import '__';
+@import '../collaborate-block/__';
+@import '../page-intro-block/__';
+
+.collaborate-pageintro-wrapper {
+
+    @media @_l__desktop__media {
+        @collaborate-block__space-x: @collaborate-block__desktop__width + @collaborate-block__desktop__offset-left;
+        @page-intro-block__offset-left: @page-intro-block__desktop__offset-left - @collaborate-block__space-x;
+
+        & {
+            display: flex;
+            margin-top: @page-intro-block__desktop__offset-top;
+            margin-bottom: 101px;
+        }
+
+        .collaborate-block {
+            order: 1;
+        }
+
+        .page-intro-block {
+            order: 2;
+            margin-left: @page-intro-block__offset-left;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+    }
+}
