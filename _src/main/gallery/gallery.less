@@ -112,10 +112,7 @@
         }
 
         .item {
-            display: inline-block;
             position: relative;
-            vertical-align: top;
-            white-space: normal;
             border-width: 0 @item-gap-half;
             border-style: solid;
             border-color: transparent;
@@ -141,14 +138,43 @@
                 }
             }
         }
+
+        &:not(.mobile-column) {
+            overflow-x: scroll;
+            -webkit-overflow-scrolling: touch;
+
+            .list {
+                font-size: 0;
+                white-space: nowrap;
+            }
+
+            .item {
+                display: inline-block;
+                vertical-align: top;
+                white-space: normal;
+            }
+        }
+
+        &.mobile-column {
+
+            .item + .item {
+                margin-top: 10px;
+            }
+        }
     }
 
     @media @_l__phone1__media {
         @item-size: 285px;
 
         .item {
-            width: @item-size;
             height: @item-size;
+        }
+
+        &:not(.mobile-column) {
+
+            .item {
+                width: @item-size;
+            }
         }
     }
 
@@ -156,8 +182,14 @@
         @item-size: 305px;
 
         .item {
-            width: @item-size;
             height: @item-size;
+        }
+
+        &:not(.mobile-column) {
+
+            .item {
+                width: @item-size;
+            }
         }
     }
 
