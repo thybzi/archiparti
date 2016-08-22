@@ -102,13 +102,13 @@
     }
 
     @media @_l__phone__media {
-        margin-top: 10px;
-        overflow-x: scroll;
-        -webkit-overflow-scrolling: touch;
+        @item-gap-half: round(@gallery__mobile__item-gap / 2);
+        @item-offset-x-value: @gallery__mobile__block-offset - @item-gap-half;
 
-        .list {
-            font-size: 0;
-            white-space: nowrap;
+        & {
+            margin-top: @gallery__mobile__block-offset;
+            padding-left: @item-offset-x-value;
+            padding-right: @item-offset-x-value;
         }
 
         .item {
@@ -116,7 +116,7 @@
             position: relative;
             vertical-align: top;
             white-space: normal;
-            border-width: 0 5px;
+            border-width: 0 @item-gap-half;
             border-style: solid;
             border-color: transparent;
 

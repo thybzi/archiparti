@@ -409,12 +409,8 @@ body {
 @media screen and (max-width: 1023px), screen and (max-height: 599px) {
   .gallery {
     margin-top: 10px;
-    overflow-x: scroll;
-    -webkit-overflow-scrolling: touch;
-  }
-  .gallery .list {
-    font-size: 0;
-    white-space: nowrap;
+    padding-left: 5px;
+    padding-right: 5px;
   }
   .gallery .item {
     display: inline-block;
