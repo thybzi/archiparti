@@ -6,7 +6,7 @@
     <title>Archiparti{% if  page.title %} | {{ page.title }}{% endif %}</title>
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/styles/main.css">
 </head>
-<body>
+<body{% if page.body_class %} class="{{ page.body_class }}{% endif %}">
 
 {% include header.html %}
 
