@@ -1,5 +1,14 @@
 @import '__';
 
 .filter-gallery-wrapper {
-    // your code here
+
+    @media @_l__desktop__media {
+        @offset-x: 10px; // @todo use gallery constant
+
+        .gallery {
+            margin-top: 22px;
+            margin-left: -@offset-x;
+            margin-right: -@offset-x;
+        }
+    }
 }

@@ -1244,3 +1244,10 @@ body.news {
     display: none;
   }
 }
+@media screen and (min-width: 1024px) and (min-height: 600px) {
+  .filter-gallery-wrapper .gallery {
+    margin-top: 22px;
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+}
