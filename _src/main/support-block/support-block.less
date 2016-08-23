@@ -1,0 +1,98 @@
+@import '__';
+@import '../page-intro-block/__';
+
+.support-block {
+    position: relative; // @todo overlap viewport stroke
+    border-top: @support-block__item-stroke;
+
+    .item {
+        padding-top: @support-block__item-pad-y;
+        padding-bottom: @support-block__item-pad-y;
+        border-bottom: @support-block__item-stroke;
+
+        .question {
+            font-weight: @_f__weight_black;
+            font-size: 20px;
+            line-height: 30px;
+            cursor: pointer;
+        }
+
+        .answer {
+            margin-top: 20px;
+            font-size: 16px;
+            line-height: 37px;
+
+            p,
+            ul,
+            ol {
+
+                & + p,
+                & + ul,
+                & + ol {
+                    margin-top: 16px;
+                }
+            }
+
+            ol,
+            ul {
+                padding-left: 2.5em;
+            }
+
+            ul li {
+                list-style-type: square;
+            }
+
+            ol li {
+                list-style-type: decimal;
+            }
+        }
+
+        &:not(.expanded) {
+
+            .answer {
+                display: none;
+            }
+        }
+    }
+
+    @media @_l__desktop__media {
+        @block-offset-x: @_l__desktop__content-offset-x;
+
+
+        & {
+            margin-left: -@block-offset-x;
+            margin-right: -@block-offset-x;
+        }
+
+        .item {
+            padding-left: @block-offset-x;
+
+            .question,
+            .answer {
+                margin-left: @page-intro-block__desktop__offset-left;
+            }
+
+            .question {
+                width: 450px;
+            }
+
+            .answer {
+                width: 480px;
+                padding-bottom: 21px;
+            }
+        }
+    }
+
+    @media @_l__phone__media {
+        @item-pad-x: 20px;
+
+        .item {
+            padding-left: @item-pad-x;
+            padding-right: @item-pad-x;
+
+            .answer {
+                padding-bottom: 60px;
+            }
+        }
+    }
+}

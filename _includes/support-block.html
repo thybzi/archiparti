@@ -1,0 +1,11 @@
+{% assign items = site.questions | sort:"order" %}
+<div class="support-block">
+{% for item in items %}
+    <dl class="item">
+        <dt class="question" onclick="this.parentNode.classList.toggle('expanded')">{{ item.title }}</dt>
+        <dd class="answer">
+            {{ item.content }}
+        </dd>
+    </dl>
+{% endfor %}
+</div>

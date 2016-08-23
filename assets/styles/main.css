@@ -1281,3 +1281,66 @@ body.news {
     margin-right: -10px;
   }
 }
+.support-block {
+  position: relative;
+  border-top: 2px solid #000;
+}
+.support-block .item {
+  padding-top: 28px;
+  padding-bottom: 28px;
+  border-bottom: 2px solid #000;
+}
+.support-block .item .question {
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 30px;
+  cursor: pointer;
+}
+.support-block .item .answer {
+  margin-top: 20px;
+  font-size: 16px;
+  line-height: 37px;
+}
+.support-block .item .answer p + p, .support-block .item .answer ul + p, .support-block .item .answer ol + p, .support-block .item .answer p + ul, .support-block .item .answer ul + ul, .support-block .item .answer ol + ul, .support-block .item .answer p + ol, .support-block .item .answer ul + ol, .support-block .item .answer ol + ol {
+  margin-top: 16px;
+}
+.support-block .item .answer ol, .support-block .item .answer ul {
+  padding-left: 2.5em;
+}
+.support-block .item .answer ul li {
+  list-style-type: square;
+}
+.support-block .item .answer ol li {
+  list-style-type: decimal;
+}
+.support-block .item:not(.expanded) .answer {
+  display: none;
+}
+@media screen and (min-width: 1024px) and (min-height: 600px) {
+  .support-block {
+    margin-left: -3%;
+    margin-right: -3%;
+  }
+  .support-block .item {
+    padding-left: 3%;
+  }
+  .support-block .item .question, .support-block .item .answer {
+    margin-left: 317px;
+  }
+  .support-block .item .question {
+    width: 450px;
+  }
+  .support-block .item .answer {
+    width: 480px;
+    padding-bottom: 21px;
+  }
+}
+@media screen and (max-width: 1023px), screen and (max-height: 599px) {
+  .support-block .item {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .support-block .item .answer {
+    padding-bottom: 60px;
+  }
+}
