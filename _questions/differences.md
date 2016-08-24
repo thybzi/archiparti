@@ -7,6 +7,6 @@ Differences are just evident.
 * Contractor company is depressing.
 * There are vampires in design firm.
 * Independent designer is far too hot.
-* Just to be fair, archiparti is pretty.
+* Just to be fair, archiparti is lovely.
 
 (We’re only kidding.)
