@@ -213,6 +213,7 @@ html::before {
   border-width: 0 4px;
 }
 body {
+  position: relative;
   min-height: 100%;
 }
 body::before {
@@ -1091,7 +1092,6 @@ body.news {
   }
 }
 .page-intro-block {
-  position: relative;
   color: #000;
 }
 .page-intro-block .title {
@@ -1125,9 +1125,6 @@ body.news {
     font-size: 28px;
     line-height: 55px;
   }
-}
-.collaborate-block {
-  position: relative;
 }
 .collaborate-block .image {
   display: block;
@@ -1209,7 +1206,6 @@ body.news {
   }
 }
 .filter {
-  position: relative;
   color: #000;
 }
 .filter li {
@@ -1282,7 +1278,6 @@ body.news {
   }
 }
 .support-block {
-  position: relative;
   border-top: 2px solid #000;
 }
 .support-block .item {
