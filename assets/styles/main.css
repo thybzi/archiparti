@@ -238,8 +238,8 @@ body::after {
 }
 @media screen and (max-width: 1023px), screen and (max-height: 599px) {
   body {
-    padding-left: 4px;
-    padding-right: 4px;
+    padding-left: 20px;
+    padding-right: 20px;
     padding-top: 136px;
   }
 }
@@ -423,6 +423,8 @@ body.news {
 }
 @media screen and (max-width: 1023px), screen and (max-height: 599px) {
   .gallery {
+    margin-left: -16px;
+    margin-right: -16px;
     margin-top: 10px;
     padding-left: 5px;
     padding-right: 5px;
@@ -703,8 +705,8 @@ body.news {
 @media screen and (max-width: 1023px), screen and (max-height: 599px) {
   .subscribe-block {
     position: relative;
-    margin-left: -4px;
-    margin-right: -4px;
+    margin-left: -20px;
+    margin-right: -20px;
   }
 }
 @media screen and (min-width: 1024px) and (min-height: 600px) {
@@ -810,7 +812,8 @@ body.news {
 }
 @media screen and (max-width: 1023px), screen and (max-height: 599px) {
   .bounce-gallery {
-    width: 100%;
+    margin-left: -16px;
+    margin-right: -16px;
     padding-top: 2px;
     overflow-x: scroll;
     -webkit-overflow-scrolling: touch;
@@ -977,6 +980,10 @@ body.news {
 .contacts-block {
   display: none;
 }
+.intended-block {
+  margin-left: -16px;
+  margin-right: -16px;
+}
 .intended-block .section.owner {
   background-color: #fafafa;
 }
@@ -1108,8 +1115,6 @@ body.news {
 @media screen and (max-width: 1023px), screen and (max-height: 599px) {
   .page-intro-block {
     max-width: 312px;
-    margin-left: 19px;
-    margin-right: 19px;
     margin-bottom: 90px;
   }
   .page-intro-block .title {
@@ -1164,8 +1169,8 @@ body.news {
 @media screen and (max-width: 1023px), screen and (max-height: 599px) {
   .collaborate-block {
     position: relative;
-    margin-left: 24px;
-    margin-right: 24px;
+    margin-left: 4px;
+    margin-right: 4px;
     padding-left: 139px;
   }
   .collaborate-block .image {
@@ -1232,8 +1237,6 @@ body.news {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     height: 60px;
-    margin-left: 10px;
-    margin-right: 10px;
     margin-top: 78px;
     border: 2px solid #000;
   }
@@ -1268,6 +1271,12 @@ body.news {
     margin-top: 22px;
     margin-left: -10px;
     margin-right: -10px;
+  }
+}
+@media screen and (max-width: 1023px), screen and (max-height: 599px) {
+  .filter-gallery-wrapper .filter {
+    margin-left: -6px;
+    margin-right: -6px;
   }
 }
 .support-block {
@@ -1325,6 +1334,8 @@ body.news {
 }
 @media screen and (max-width: 1023px), screen and (max-height: 599px) {
   .support-block .item {
+    margin-left: -20px;
+    margin-right: -20px;
     padding-left: 20px;
     padding-right: 20px;
   }

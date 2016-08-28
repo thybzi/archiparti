@@ -1,4 +1,5 @@
 @import '__';
+@import '../gallery/__';
 
 .filter-gallery-wrapper {
 
@@ -9,6 +10,15 @@
             margin-top: 22px;
             margin-left: -@offset-x;
             margin-right: -@offset-x;
+        }
+    }
+
+    @media @_l__phone__media {
+        @filter-offset-x: @_l__phone__content-offset-x-visual - @gallery__mobile__block-offset;
+
+        .filter {
+            margin-left: -@filter-offset-x;
+            margin-right: -@filter-offset-x;
         }
     }
 }

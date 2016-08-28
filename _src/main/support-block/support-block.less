@@ -83,9 +83,11 @@
     }
 
     @media @_l__phone__media {
-        @item-pad-x: 20px;
+        @item-pad-x: @_l__phone__content-offset-x;
 
         .item {
+            margin-left: -@_l__phone__content-offset-x;
+            margin-right: -@_l__phone__content-offset-x;
             padding-left: @item-pad-x;
             padding-right: @item-pad-x;
 
