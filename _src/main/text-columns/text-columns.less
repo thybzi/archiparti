@@ -1,0 +1,36 @@
+@import '__';
+
+.text-columns {
+    margin-top: @text-columns__offset-top;
+
+
+    @media @_l__desktop__media {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        margin-left: @text-columns__desktop__offset-x;
+        margin-right: @text-columns__desktop__offset-x;
+
+        .text-block {
+            margin-left: 0;
+
+            &:first-child {
+                width: 46%;
+            }
+
+            &:last-child {
+                width: 43%;
+            }
+        }
+    }
+
+
+    @media @_l__phone__media {
+
+        .text-block + .text-block {
+            margin-top: @text-columns__mobile__item-gap-y;
+        }
+
+    ;
+    }
+}

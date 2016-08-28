@@ -231,7 +231,7 @@ body::before {
   left: 0;
   right: 0;
   top: 0;
-  z-index: 500;
+  z-index: 50;
   height: 0;
   border-bottom: 4px solid #000;
 }
@@ -241,7 +241,7 @@ body::after {
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 500;
+  z-index: 50;
   height: 0;
   border-top: 4px solid #000;
 }
@@ -1347,6 +1347,63 @@ body.news {
   font-size: 18.2px;
   line-height: 18.2px;
 }
+.news-item-head {
+  position: relative;
+  z-index: 60;
+  margin-bottom: 90px;
+}
+.news-item-head .background {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.news-item-head .date {
+  display: block;
+  position: relative;
+  font-weight: 700;
+}
+.news-item-head .title {
+  position: relative;
+}
+@media screen and (min-width: 1024px) and (min-height: 600px) {
+  .news-item-head {
+    margin-top: -167px;
+    margin-left: -3%;
+    margin-right: -3%;
+    padding-top: 307px;
+    padding-left: 317px;
+    padding-bottom: 43px;
+  }
+  .news-item-head .date {
+    font-size: 12px;
+    line-height: 17px;
+  }
+  .news-item-head .title {
+    margin-top: 13px;
+    font-size: 40px;
+    line-height: 60px;
+    width: 463px;
+  }
+}
+@media screen and (max-width: 1023px), screen and (max-height: 599px) {
+  .news-item-head {
+    margin-top: -136px;
+    margin-left: -20px;
+    margin-right: -20px;
+    padding: 166px 30px 29px;
+  }
+  .news-item-head .date {
+    font-size: 16px;
+    line-height: 17px;
+  }
+  .news-item-head .title {
+    margin-top: 8px;
+    font-size: 30px;
+    line-height: 40px;
+  }
+}
 .page-intro-block {
   color: #000;
 }
@@ -1542,6 +1599,40 @@ body.news {
 @media screen and (min-width: 1024px) and (min-height: 600px) {
   .text-block {
     margin-left: 317px;
+  }
+}
+.text-columns {
+  margin-top: 90px;
+}
+@media screen and (min-width: 1024px) and (min-height: 600px) {
+  .text-columns {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-left: 66px;
+    margin-right: 66px;
+  }
+  .text-columns .text-block {
+    margin-left: 0;
+  }
+  .text-columns .text-block:first-child {
+    width: 46%;
+  }
+  .text-columns .text-block:last-child {
+    width: 43%;
+  }
+}
+@media screen and (max-width: 1023px), screen and (max-height: 599px) {
+  .text-columns .text-block + .text-block {
+    margin-top: 90px;
   }
 }
 .video-embed-block {
