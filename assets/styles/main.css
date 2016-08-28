@@ -656,6 +656,7 @@ body.news {
 }
 @media screen and (max-width: 1023px), screen and (max-height: 599px) {
   .filter {
+    position: relative;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     height: 60px;
