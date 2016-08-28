@@ -4,5 +4,14 @@
 {% elsif include.parent_text %}
     {% assign prefix = include.parent_text %}
 {% endif %}
+{% if include.tagname %}
+    {% assign tagname = include.tagname %}
+{% elsif include.parent_text %}
+    {% assign tagname = 'h2' %}
+{% else %}
+    {% assign tagname = 'h1' %}
+{% endif %}
 {% endcapture %}{% assign devnull = nil %}
-<div class="context-title"{% if prefix %} data-prefix="{{ prefix }}"{% endif %}>{{ include.text }}</div>
+<{{ tagname }} class="context-title"{% if prefix %} data-prefix="{{ prefix }}"{% endif %}>
+    {{ include.text }}
+</{{ tagname }}>

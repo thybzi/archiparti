@@ -1,3 +1,4 @@
-<div class="headline"{% if include.order %} data-prefix="0{{ include.order }}"{% endif %}>
+{% if include.tagname %}{% assign tagname = include.tagname %}{% else %}{% assign tagname = 'div' %}{% endif %}
+<{{ tagname }} class="headline"{% if include.order %} data-prefix="0{{ include.order }}"{% endif %}>
     {{ include.text | markdownify | remove:'<p>' | remove:'</p>' }}
-</div>
+</{{ tagname }}>
