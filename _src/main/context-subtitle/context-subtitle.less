@@ -1,0 +1,15 @@
+@import '__';
+
+.context-subtitle {
+    width: 269px;
+    margin-bottom: @context-subtitle__offset-bottom;
+    .context-subtitle__text-style();
+
+    @media @_l__desktop__media {
+        margin-left: @_l__desktop__indented-offset-left;
+    }
+
+    &[data-prefix]::before {
+        content: attr(data-prefix) '. ';
+    }
+}

@@ -1,0 +1,38 @@
+@import '../_';
+
+@text-block__line-height: 37px;
+.text-block__text-style() {
+    font-size: 16px;
+    line-height: @text-block__line-height;
+}
+
+.text-block__child-styles() {
+
+    a {
+        font-weight: @_f__weight_black;
+    }
+
+    p,
+    ol,
+    ul {
+
+        & + p,
+        & + ol,
+        & + ul {
+            margin-top: 16px;
+        }
+    }
+
+    ol,
+    ul {
+        padding-left: 2.5em;
+    }
+
+    ol li {
+        list-style-type: decimal;
+    }
+
+    ul li {
+        list-style-type: square;
+    }
+}

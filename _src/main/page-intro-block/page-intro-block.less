@@ -1,28 +1,21 @@
 @import '__';
+@import (reference) '../context-title/%';
+@import (reference) '../headline/%';
 
 .page-intro-block {
     color: @_c__black;
 
-    .title {
-        font-size: 12px;
-        line-height: 17px;
-    }
 
     @media @_l__desktop__media {
 
         & {
-            max-width: 463px;
             margin-left: @page-intro-block__desktop__offset-left;
             margin-bottom: @page-intro-block__desktop__offset-bottom;
         }
 
-        .title {
-            margin-bottom: 13px;
-        }
-
-        .text {
-            font-size: 40px;
-            line-height: 60px;
+        .context-title,
+        .headline {
+            margin-left: 0; // block has its own offset, no need for children offset
         }
     }
 
@@ -32,15 +25,6 @@
         & {
             max-width: 312px;
             margin-bottom: 90px;
-        }
-
-        .title {
-            margin-bottom: 22px;
-        }
-
-        .text {
-            font-size: 28px;
-            line-height: 55px;
         }
     }
 }

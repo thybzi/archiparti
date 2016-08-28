@@ -1,0 +1,3 @@
+<div class="headline"{% if include.order %} data-prefix="0{{ include.order }}"{% endif %}>
+    {{ include.text | markdownify | remove:'<p>' | remove:'</p>' }}
+</div>

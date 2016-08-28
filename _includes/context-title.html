@@ -1,0 +1,8 @@
+{% capture devnull %}
+{% if include.parent_text == true %}
+    {% assign prefix = page.title %}
+{% elsif include.parent_text %}
+    {% assign prefix = include.parent_text %}
+{% endif %}
+{% endcapture %}{% assign devnull = nil %}
+<div class="context-title"{% if prefix %} data-prefix="{{ prefix }}"{% endif %}>{{ include.text }}</div>

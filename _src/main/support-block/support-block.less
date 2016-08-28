@@ -1,5 +1,6 @@
 @import '__';
-@import '../page-intro-block/__';
+@import '../context-subtitle/__';
+@import '../text-block/__';
 
 .support-block {
     border-top: @support-block__item-stroke;
@@ -10,40 +11,14 @@
         border-bottom: @support-block__item-stroke;
 
         .question {
-            font-weight: @_f__weight_black;
-            font-size: 20px;
-            line-height: 30px;
+            .context-subtitle__text-style();
             cursor: pointer;
         }
 
         .answer {
-            margin-top: 20px;
-            font-size: 16px;
-            line-height: 37px;
-
-            p,
-            ul,
-            ol {
-
-                & + p,
-                & + ul,
-                & + ol {
-                    margin-top: 16px;
-                }
-            }
-
-            ol,
-            ul {
-                padding-left: 2.5em;
-            }
-
-            ul li {
-                list-style-type: square;
-            }
-
-            ol li {
-                list-style-type: decimal;
-            }
+            margin-top: @context-subtitle__offset-bottom; // offset must only appear when answer is shown
+            .text-block__text-style();
+            .text-block__child-styles();
         }
 
         &:not(.expanded) {

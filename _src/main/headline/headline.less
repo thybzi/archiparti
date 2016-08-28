@@ -1,0 +1,22 @@
+@import '__';
+
+.headline {
+    margin-bottom: 30px;
+
+    @media @_l__desktop__media {
+        width: @headline__desktop__width;
+        margin-left: @_l__desktop__indented-offset-left;
+        font-size: 40px;
+        line-height: 60px;
+    }
+
+    @media @_l__phone__media {
+        font-size: 28px;
+        line-height: 55px;
+    }
+
+    &[data-prefix]::before {
+        content: attr(data-prefix) '. ';
+        font-weight: @_f__weight_bold;
+    }
+}
