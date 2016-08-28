@@ -263,6 +263,9 @@ body {
   background-color: #fafafa;
   font-family: 'Playfair Display', Arial, Helvetica, FreeSans, sans-serif;
 }
+body.about {
+  background-color: #ffe848;
+}
 body.news {
   background-color: #b1eaff;
 }

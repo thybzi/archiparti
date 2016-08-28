@@ -1,0 +1,59 @@
+---
+title: About
+body_class: about
+---
+
+{% include page-sections-menu.html titles="Concept|Details|Careers" %}
+
+
+{% capture section_content %}
+    {% include anchor.html name="concept" %}
+    {% include context-title.html text="Concept" parent_text=true %}
+    {% include headline.html order="1" text="We are a *Hong Kong* based tech startup with international vision:" %}
+
+    {% include emphasized-text.html text="
+        Connect Project Owners with passionate Independent Designers, and streamline the non-creative part
+        through our intelligent platform.
+        " %}
+    {% include video-embed-block.html src_base="http://techslides.com/demos/sample-videos/small" %}
+{% endcapture %}
+{% include page-section.html content=section_content %}
+
+
+{% capture section_content %}
+    {% include anchor.html name="details" %}
+    {% include context-title.html text="Details" parent_text=true %}
+    {% include context-subtitle.html order="2" text="Some nice subtitle about the action" %}
+
+    {% capture text %}
+        To put this idea into action, we provide a cloud-based software solution and standardized construction
+        management to streamline inefficiencies and disorganization inherent in the current construction industry,
+        hence empower creativity. We offer perspective and advice of a dependable team, elevate every design
+        projects and bring them to life. The advantage translated to the project owners will be a more custom home
+        at trace of the market price, with months of time saved, and a transparent process.
+    {% endcapture %}{% assign text = text | replace:'   ','' %}
+    {% include text-block.html text=text %}
+
+    {% include intended-teaser.html %}
+    {% include gallery.html loose=true %}
+{% endcapture %}
+{% include page-section.html content=section_content %}
+
+
+{% capture section_content %}
+    {% include anchor.html name="careers" %}
+    {% include context-title.html text="Careers" parent_text=true %}
+    {% include headline.html order="3" text="New career option for new generation of independent designers" %}
+
+    {% capture text %}
+        You will have the opportunity to work for and with some of the most talented professionals in the industry.
+        We are continually looking for ways to build it bigger, smarter, faster, stronger and better; that’s why
+        we are looking for self driven, creative and collaborative entrepreneurs to join our team.
+
+        Interested parties please send your full resume or portfolio
+        to [hello@archiparti.com](mailto:hello@archiparti.com)
+    {% endcapture %}{% assign text = text | replace:'   ','' %}
+    {% include text-block.html text=text %}
+    {% include gallery.html %}
+{% endcapture %}
+{% include page-section.html content=section_content %}
