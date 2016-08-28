@@ -240,12 +240,14 @@ body::after {
   body {
     padding-left: 4px;
     padding-right: 4px;
+    padding-top: 136px;
   }
 }
 @media screen and (min-width: 1024px) and (min-height: 600px) {
   body {
     padding-left: 3%;
     padding-right: 3%;
+    padding-top: 167px;
   }
 }
 body {
@@ -898,7 +900,7 @@ body.news {
 }
 @media screen and (max-width: 374px), screen and (max-height: 599px) {
   .intro-block {
-    margin-top: 143px;
+    margin-top: 7px;
   }
   .intro-block .section-title, .intro-block .subtitle {
     width: 232px;
@@ -921,7 +923,7 @@ body.news {
 }
 @media screen and (min-width: 375px) and (max-width: 1023px) {
   .intro-block {
-    margin-top: 177px;
+    margin-top: 41px;
   }
   .intro-block .section-title, .intro-block .subtitle {
     width: 276px;
@@ -964,12 +966,12 @@ body.news {
 }
 @media screen and (min-width: 1024px) and (max-width: 1439px) and (min-height: 600px) {
   .intro-block {
-    margin-top: 227px;
+    margin-top: 60px;
   }
 }
 @media screen and (min-width: 1440px) and (min-height: 600px) {
   .intro-block {
-    margin-top: 364px;
+    margin-top: 197px;
   }
 }
 .contacts-block {
@@ -1094,29 +1096,21 @@ body.news {
 .page-intro-block {
   color: #000;
 }
-.page-intro-block .title {
-  font-size: 12px;
-  line-height: 17px;
-}
 @media screen and (min-width: 1024px) and (min-height: 600px) {
   .page-intro-block {
-    max-width: 463px;
     margin-left: 317px;
-    margin-top: 167px;
     margin-bottom: 62px;
   }
-  .page-intro-block .title {
-    margin-bottom: 13px;
-  }
-  .page-intro-block .text {
-    font-size: 40px;
-    line-height: 60px;
+  .page-intro-block .context-title, .page-intro-block .headline {
+    margin-left: 0;
   }
 }
 @media screen and (max-width: 1023px), screen and (max-height: 599px) {
   .page-intro-block {
     max-width: 312px;
-    margin: 136px 19px 90px;
+    margin-left: 19px;
+    margin-right: 19px;
+    margin-bottom: 90px;
   }
   .page-intro-block .title {
     margin-bottom: 22px;
@@ -1186,7 +1180,6 @@ body.news {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    margin-top: 167px;
     margin-bottom: 101px;
   }
   .collaborate-pageintro-wrapper .collaborate-block {
