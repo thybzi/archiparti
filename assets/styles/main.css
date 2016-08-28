@@ -128,7 +128,7 @@
   font-family: 'icons';
   font-weight: 400;
   font-style: normal;
-  src: local('☺︎'), url(../fonts/icons.woff?v=d156478140483a55) format('woff'), url(../fonts/icons.ttf?v=e1e770f36897ace7) format('truetype');
+  src: local('☺︎'), url(../fonts/icons.woff?v=477ae4c5fb2aeee1) format('woff'), url(../fonts/icons.ttf?v=990422358c0d8690) format('truetype');
 }
 html, body {
   margin: 0;
