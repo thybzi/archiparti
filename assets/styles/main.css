@@ -423,8 +423,8 @@ body.news {
 }
 @media screen and (max-width: 1023px), screen and (max-height: 599px) {
   .gallery {
-    margin-left: -16px;
-    margin-right: -16px;
+    margin-left: -20px;
+    margin-right: -20px;
     margin-top: 10px;
     padding-left: 5px;
     padding-right: 5px;
@@ -1275,8 +1275,8 @@ body.news {
 }
 @media screen and (max-width: 1023px), screen and (max-height: 599px) {
   .filter-gallery-wrapper .filter {
-    margin-left: -6px;
-    margin-right: -6px;
+    margin-left: -10px;
+    margin-right: -10px;
   }
 }
 .support-block {
