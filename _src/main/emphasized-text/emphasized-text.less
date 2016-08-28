@@ -1,12 +1,24 @@
 @import '__';
 
 .emphasized-text {
+    margin-bottom: 90px;
 
     @media @_l__desktop__media {
         margin-left: 84px;
         margin-top: 130px;
         font-size: 60px;
         line-height: 100px;
+
+        &.quote {
+
+            &::before {
+                content: '“';
+            }
+
+            &::after {
+                content: '”';
+            }
+        }
     }
 
     @media @_l__phone__media {

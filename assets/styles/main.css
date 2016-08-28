@@ -601,12 +601,21 @@ body.news {
 .context-subtitle[data-prefix]::before {
   content: attr(data-prefix) '. ';
 }
+.emphasized-text {
+  margin-bottom: 90px;
+}
 @media screen and (min-width: 1024px) and (min-height: 600px) {
   .emphasized-text {
     margin-left: 84px;
     margin-top: 130px;
     font-size: 60px;
     line-height: 100px;
+  }
+  .emphasized-text.quote::before {
+    content: '“';
+  }
+  .emphasized-text.quote::after {
+    content: '”';
   }
 }
 @media screen and (max-width: 1023px), screen and (max-height: 599px) {
