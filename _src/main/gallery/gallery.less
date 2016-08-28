@@ -98,8 +98,82 @@
                 font-weight: @_f__weight_black;
             }
         }
-
     }
+
+
+    @media @_l__desktop__media {
+
+        & {
+            margin-left: -@_l__desktop__content-offset-x;
+            margin-right: -@_l__desktop__content-offset-x;
+            margin-top: 150px; // @todo temporary
+        }
+
+        .list {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .item {
+            box-sizing: border-box;
+            border-style: solid;
+            border-color: transparent;
+
+            &.complex {
+
+                &:not(.double) {
+
+                    .caption {
+                        .absolute(30px, null, null, 25px);
+                        font-size: 20px;
+                        line-height: 26px;
+                        max-width: 160px;
+                        font-weight: @_f__weight_normal;
+                    }
+                }
+
+                &.double {
+
+                    .caption {
+                        .absolute(20px, null, null, 25px);
+                        font-size: 30px;
+                        line-height: 46px;
+                        max-width: 285px;
+                        font-weight: @_f__weight_bold;
+                    }
+                }
+            }
+
+            &.event {
+
+                &.double {
+
+                    .caption {
+                        .absolute(20px, null, null, 147px);
+                        max-width: 285px;
+                        font-size: 30px;
+                        line-height: 46px;
+                        font-weight: @_f__weight_bold;
+                    }
+
+                    .link-action {
+                        .absolute(null, null, 30px, 153px);
+                    }
+                }
+            }
+        }
+
+        // Common variation (4 columns)
+        &:not(.loose) {
+            .gallery > .desktop-sizing(4, 250px, 10px);
+        }
+
+        // Loose variation (3 columns)
+        &.loose {
+            .gallery > .desktop-sizing(3, 305px, 20px);
+        }
+    }
+
 
     @media @_l__phone__media {
         @item-gap-half: round(@gallery__mobile__item-gap / 2);
@@ -192,79 +266,6 @@
             .item {
                 width: @item-size;
             }
-        }
-    }
-
-    @media @_l__desktop__media {
-
-        & {
-            margin-left: -@_l__desktop__content-offset-x;
-            margin-right: -@_l__desktop__content-offset-x;
-            margin-top: 150px; // @todo temporary
-        }
-
-        .list {
-            display: flex;
-            flex-wrap: wrap;
-        }
-
-        .item {
-            box-sizing: border-box;
-            border-style: solid;
-            border-color: transparent;
-
-            &.complex {
-
-                &:not(.double) {
-
-                    .caption {
-                        .absolute(30px, null, null, 25px);
-                        font-size: 20px;
-                        line-height: 26px;
-                        max-width: 160px;
-                        font-weight: @_f__weight_normal;
-                    }
-                }
-
-                &.double {
-
-                    .caption {
-                        .absolute(20px, null, null, 25px);
-                        font-size: 30px;
-                        line-height: 46px;
-                        max-width: 285px;
-                        font-weight: @_f__weight_bold;
-                    }
-                }
-            }
-
-            &.event {
-
-                &.double {
-
-                    .caption {
-                        .absolute(20px, null, null, 147px);
-                        max-width: 285px;
-                        font-size: 30px;
-                        line-height: 46px;
-                        font-weight: @_f__weight_bold;
-                    }
-
-                    .link-action {
-                        .absolute(null, null, 30px, 153px);
-                    }
-                }
-            }
-        }
-
-        // Common variation (4 columns)
-        &:not(.loose) {
-            .gallery > .desktop-sizing(4, 250px, 10px);
-        }
-
-        // Loose variation (3 columns)
-        &.loose {
-            .gallery > .desktop-sizing(3, 305px, 20px);
         }
     }
 }

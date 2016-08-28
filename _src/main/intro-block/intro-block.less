@@ -16,6 +16,47 @@
     }
 
 
+    @media @_l__desktop__media {
+        @title-font-size: 42px;
+        @title-line-height: 57px;
+        @subtitle-font-size: @title-font-size;
+        @subtitle-line-height: @subtitle-font-size;
+        @text-font-size: 16px;
+        @text-line-height: 26px;
+
+        .section-title,
+        .subtitle {
+            width: 584px;
+        }
+
+        .section-title {
+            font-size: @title-font-size;
+            line-height: @title-line-height;
+        }
+
+        .subtitle {
+            margin-top: 18px;
+            font-size: @subtitle-font-size;
+            line-height: @subtitle-line-height;
+        }
+
+        .text {
+            width: 382px;
+            margin-top: 37px;
+            font-size: @text-font-size;
+            line-height: @text-line-height;
+        }
+    }
+
+    @media @_l__desktop1__media {
+        margin-top: 60px;
+    }
+
+    @media @_l__desktop2__media {
+        margin-top: 197px;
+    }
+
+
     @media @_l__phone1__media {
         @title-font-size: 24px;
         @title-line-height: 29px;
@@ -86,45 +127,5 @@
             font-size: @text-font-size;
             line-height: @text-line-height;
         }
-    }
-
-    @media @_l__desktop__media {
-        @title-font-size: 42px;
-        @title-line-height: 57px;
-        @subtitle-font-size: @title-font-size;
-        @subtitle-line-height: @subtitle-font-size;
-        @text-font-size: 16px;
-        @text-line-height: 26px;
-
-        .section-title,
-        .subtitle {
-            width: 584px;
-        }
-
-        .section-title {
-            font-size: @title-font-size;
-            line-height: @title-line-height;
-        }
-
-        .subtitle {
-            margin-top: 18px;
-            font-size: @subtitle-font-size;
-            line-height: @subtitle-line-height;
-        }
-
-        .text {
-            width: 382px;
-            margin-top: 37px;
-            font-size: @text-font-size;
-            line-height: @text-line-height;
-        }
-    }
-
-    @media @_l__desktop1__media {
-        margin-top: 60px;
-    }
-
-    @media @_l__desktop2__media {
-        margin-top: 197px;
     }
 }

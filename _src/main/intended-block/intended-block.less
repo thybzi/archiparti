@@ -65,38 +65,6 @@
     }
 
 
-    @media @_l__phone__media {
-
-        &:not(.has-expanded) {
-            @section-height: 160px;
-            @section-inner-height: @section-height - (2 * @section-stroke-size);
-            @section-stroke-size: @_l__viewport-stroke-size;
-            @section-stroke-y: @section-stroke-size solid @_c__black;
-
-            .section {
-                position: relative;
-                box-sizing: border-box;
-                height: @section-height;
-                border-top: @section-stroke-y;
-                border-bottom: @section-stroke-y;
-                text-align: center;
-
-                & + .section {
-                    margin-top: -@section-stroke-size;
-                }
-            }
-
-            .section-title {
-                position: relative;
-                .hdiff(top, @section-inner-height, @default-section-title-height);
-            }
-
-            .subsection {
-                display: none;
-            }
-        }
-    }
-
     @media @_l__desktop__media {
         @section-stroke-size: @_l__viewport-stroke-size;
 
@@ -152,6 +120,39 @@
                 & + .subsection {
                     margin-top: 56px;
                 }
+            }
+        }
+    }
+
+
+    @media @_l__phone__media {
+
+        &:not(.has-expanded) {
+            @section-height: 160px;
+            @section-inner-height: @section-height - (2 * @section-stroke-size);
+            @section-stroke-size: @_l__viewport-stroke-size;
+            @section-stroke-y: @section-stroke-size solid @_c__black;
+
+            .section {
+                position: relative;
+                box-sizing: border-box;
+                height: @section-height;
+                border-top: @section-stroke-y;
+                border-bottom: @section-stroke-y;
+                text-align: center;
+
+                & + .section {
+                    margin-top: -@section-stroke-size;
+                }
+            }
+
+            .section-title {
+                position: relative;
+                .hdiff(top, @section-inner-height, @default-section-title-height);
+            }
+
+            .subsection {
+                display: none;
             }
         }
     }
