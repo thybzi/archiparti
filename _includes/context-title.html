@@ -12,6 +12,6 @@
     {% assign tagname = 'h1' %}
 {% endif %}
 {% endcapture %}{% assign devnull = nil %}
-<{{ tagname }} class="context-title"{% if prefix %} data-prefix="{{ prefix }}"{% endif %}>
-    {{ include.text }}
-</{{ tagname }}>
+<{{ tagname }} class="context-title"{% if prefix %} data-prefix="{{ prefix }}"{% endif %}>{{
+    include.text
+}}</{{ tagname }}>
