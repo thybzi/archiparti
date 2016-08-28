@@ -1,19 +1,5 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Archiparti{% if  page.title %} | {{ page.title }}{% endif %}</title>
-    <link rel="stylesheet" href="{{ site.baseurl }}/assets/styles/main.css">
-</head>
-<body{% if page.body_class %} class="{{ page.body_class }}"{% endif %}>
-
-{% include header.html %}
+{% include _page-top.html %}
 
 {{ content }}
 
-{% include subscribe-block.html %}
-{% include support-link.html %}
-
-</body>
-</html>
+{% include _page-bottom.html %}
