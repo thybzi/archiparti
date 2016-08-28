@@ -1,0 +1,8 @@
+{% assign titles = include.titles | split:'|' %}
+<ul class="page-sections-menu">
+{% for title in titles %}
+    <li{% if forloop.index == 1 %} class="active"{% endif %}>
+        <a href="#{{ title | slugify }}" title="{{ title }}">0{{ forloop.index }}</a>
+    </li>
+{% endfor %}
+</ul>

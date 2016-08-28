@@ -1,0 +1,28 @@
+@import '__';
+
+.page-sections-menu {
+
+    @media @_l__desktop__media {
+        .fixed(178px, null, null, @_l__desktop__content-offset-x);
+        z-index: @_z__sections-menu;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 81px;
+
+        li.active {
+            color: @_c__red1;
+        }
+
+        a {
+            display: block;
+
+            &::after {
+                content: '.';
+            }
+        }
+    }
+
+    @media @_l__phone__media {
+        display: none;
+    }
+}

@@ -97,6 +97,15 @@
  * @example hdiff-floor(top, 34px, 17px)         // => top: 8px
  * @example hdiff-floor(top, 34px, 17px, -1)     // => top: -8px
  */
+/**
+ * Binds block height to current width
+ * "Height" is produced with setting percentage padding-bottom and zeroing actual height
+ * Warning: the block MUST have box-sizing: content-box (default value for most elements)!
+ * @see https://css-tricks.com/scaled-proportional-blocks-with-css-and-javascript/ (no JS actually needed)
+ * @param {number} ratio Width/height ratio (e.g. 16/9, 1.5 etc.)
+ * @uses height
+ * @uses padding-bottom
+ */
 @font-face {
   font-family: 'Playfair Display';
   font-weight: 400;
@@ -257,6 +266,11 @@ body {
 body.news {
   background-color: #b1eaff;
 }
+.anchor {
+  display: block;
+  position: relative;
+  top: -90px;
+}
 .auth-block {
   position: fixed;
   z-index: 101;
@@ -359,6 +373,21 @@ body.news {
 }
 .context-subtitle[data-prefix]::before {
   content: attr(data-prefix) '. ';
+}
+@media screen and (min-width: 1024px) and (min-height: 600px) {
+  .emphasized-text {
+    margin-left: 84px;
+    margin-top: 130px;
+    font-size: 60px;
+    line-height: 100px;
+  }
+}
+@media screen and (max-width: 1023px), screen and (max-height: 599px) {
+  .emphasized-text {
+    margin-top: 75px;
+    font-size: 40px;
+    line-height: 70px;
+  }
 }
 /* Mixins */
 .gallery {
@@ -629,6 +658,56 @@ body.news {
   content: attr(data-prefix) '. ';
   font-weight: 700;
 }
+.intended-teaser .title {
+  font-weight: 900;
+  font-size: 12px;
+  line-height: 30px;
+}
+.intended-teaser .items {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  margin-top: 14px;
+}
+.intended-teaser .items li {
+  width: 150px;
+}
+.intended-teaser .items li a {
+  display: block;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 60px;
+  padding-top: 17px;
+  border: 2px solid #000;
+  text-align: center;
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 26px;
+}
+.intended-teaser .items li.owner {
+  background-color: #fafafa;
+}
+.intended-teaser .items li.designer {
+  background-color: #fdece5;
+}
+.intended-teaser .items li + li {
+  margin-left: 6px;
+}
+@media screen and (min-width: 1024px) and (min-height: 600px) {
+  .intended-teaser {
+    margin-left: 317px;
+    margin-top: 60px;
+  }
+}
+@media screen and (max-width: 1023px), screen and (max-height: 599px) {
+  .intended-teaser {
+    margin-top: 44px;
+  }
+}
 .logo {
   position: fixed;
   left: 50%;
@@ -748,6 +827,34 @@ body.news {
   font-size: 18.2px;
   line-height: 18.2px;
 }
+.page-section + .page-section {
+  margin-top: 70px;
+}
+@media screen and (min-width: 1024px) and (min-height: 600px) {
+  .page-sections-menu {
+    position: fixed;
+    left: 3%;
+    top: 178px;
+    z-index: 99;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 81px;
+  }
+  .page-sections-menu li.active {
+    color: #df001c;
+  }
+  .page-sections-menu a {
+    display: block;
+  }
+  .page-sections-menu a::after {
+    content: '.';
+  }
+}
+@media screen and (max-width: 1023px), screen and (max-height: 599px) {
+  .page-sections-menu {
+    display: none;
+  }
+}
 .subscribe-block {
   display: block;
   z-index: 100;
@@ -830,6 +937,66 @@ body.news {
 @media screen and (min-width: 1024px) and (min-height: 600px) {
   .text-block {
     margin-left: 317px;
+  }
+}
+.video-embed-block {
+  margin-top: 100px;
+  border: 2px solid #000;
+}
+.video-embed-block .player {
+  background-color: #000;
+  position: relative;
+}
+.video-embed-block .player.playing .play-button {
+  display: none;
+}
+.video-embed-block .player.ratio_16-9 {
+  height: 0;
+  padding-bottom: 56.25%;
+}
+.video-embed-block .player.ratio_3-4 {
+  height: 0;
+  padding-bottom: 133.33333333%;
+}
+.video-embed-block .embedded-content {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.video-embed-block .play-button {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -33px;
+  margin-top: -33px;
+  cursor: pointer;
+}
+.video-embed-block .play-button::before {
+  content: '\ea05';
+  font-family: 'icons';
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 66px;
+  line-height: 66px;
+  color: #fff;
+}
+@media screen and (min-width: 1024px) and (min-height: 600px) {
+  .video-embed-block {
+    margin-left: 146px;
+    margin-bottom: 56px;
+    width: 640px;
+  }
+}
+@media screen and (max-width: 1023px), screen and (max-height: 599px) {
+  .video-embed-block {
+    margin-bottom: 70px;
+    margin-left: -20px;
+    margin-right: -20px;
   }
 }
 .bounce-gallery .item a {

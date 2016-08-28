@@ -202,3 +202,17 @@
 .hdiff-floor(@property, @parent-size, @child-size, @factor: 1) {
     @{property}: @factor * floor((@parent-size - @child-size) / 2);
 }
+
+/**
+ * Binds block height to current width
+ * "Height" is produced with setting percentage padding-bottom and zeroing actual height
+ * Warning: the block MUST have box-sizing: content-box (default value for most elements)!
+ * @see https://css-tricks.com/scaled-proportional-blocks-with-css-and-javascript/ (no JS actually needed)
+ * @param {number} ratio Width/height ratio (e.g. 16/9, 1.5 etc.)
+ * @uses height
+ * @uses padding-bottom
+ */
+.proportional-height(@ratio) {
+    height: 0;
+    padding-bottom: percentage(1 / @ratio);
+}

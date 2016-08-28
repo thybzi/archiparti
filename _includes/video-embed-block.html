@@ -1,0 +1,23 @@
+{% capture devnull %}
+    {% if include.ratio %}
+        {% assign ratio = include.ratio %}
+    {% else %}
+        {% assign ratio = '16-9' %}
+    {% endif %}
+    {% if include.formats %}
+        {% assign formats = include.formats %}
+    {% else %}
+        {% assign formats = 'webm:video/webm|ogv:video/ogg|mp4:video/mp4|3gp:video/3gp' %}
+    {% endif %}
+    {% assign formats = formats | split:'|' %}
+{% endcapture %}{% assign devnull = nil %}
+<div class="video-embed-block">
+    <div class="player ratio_{{ ratio }}">
+        <video class="embedded-content" onended="this.parentNode.classList.remove('playing');">
+        {% for format in formats %}{% assign parts = format | split:':' %}
+            <source src="{{ include.src_base }}.{{ parts | first }}" type="{{ parts | last }}">
+        {% endfor %}
+        </video>
+        <span class="play-button" onclick="this.previousElementSibling.play(); this.parentNode.classList.add('playing');"></span>
+    </div>
+</div>
