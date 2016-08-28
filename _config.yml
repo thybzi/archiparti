@@ -6,8 +6,16 @@ defaults:
   -
     scope:
       path: ""
+      type: "pages"
     values:
       layout: "default"
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "news-item"
+      permalink: /news/:year-:month-:day-:title.html
 
 collections:
   - questions
