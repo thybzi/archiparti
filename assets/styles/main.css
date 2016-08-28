@@ -816,7 +816,7 @@ body.news {
   font-weight: 900;
 }
 .text-block p + p, .text-block ol + p, .text-block ul + p, .text-block p + ol, .text-block ol + ol, .text-block ul + ol, .text-block p + ul, .text-block ol + ul, .text-block ul + ul {
-  margin-top: 16px;
+  margin-top: 37px;
 }
 .text-block ol, .text-block ul {
   padding-left: 2.5em;
@@ -1380,7 +1380,7 @@ body.news {
   font-weight: 900;
 }
 .support-block .item .answer p + p, .support-block .item .answer ol + p, .support-block .item .answer ul + p, .support-block .item .answer p + ol, .support-block .item .answer ol + ol, .support-block .item .answer ul + ol, .support-block .item .answer p + ul, .support-block .item .answer ol + ul, .support-block .item .answer ul + ul {
-  margin-top: 16px;
+  margin-top: 37px;
 }
 .support-block .item .answer ol, .support-block .item .answer ul {
   padding-left: 2.5em;
