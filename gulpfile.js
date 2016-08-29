@@ -82,7 +82,7 @@ gulp.task('icons', function (done) {
             formats: ['ttf', 'woff'],
             normalize: true,
             fontHeight: 1001,
-            timestamp: Math.round(Date.now() / 1000)
+            timestamp: 0
         }));
 
     async.parallel([
