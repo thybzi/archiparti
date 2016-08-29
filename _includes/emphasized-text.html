@@ -1,3 +1,3 @@
 <blockquote class="emphasized-text {% if include.quote %}quote{% endif %}">{{
-    include.text | strip | remove:'    ' | markdownify | remove:'<p>' | remove:'</p>'
+    include.text | remove:'    ' | markdownify | remove:'<p>' | remove:'</p>' | strip
 }}</blockquote>
