@@ -1,22 +1,6 @@
-/**
- * Applies "grater-alike" tiled circles background pattern
- * @param {color=transparent}
- */
-/**
- * Enumerate asset used only in markup via fake selector and fake CSS property
- * Allows postcss-url to process its URL and copy asset
- * After that, fake selector is removed by css-byebye
- * @param {url} url-rule Accepts value in format: url(path/to/asset) for better IDE experience
- * @example
- *     .my-component {
- *         .markup-asset(url(images/mypic.png));
- *     }
- */
-/**
- * Hides text in element, moving it away from view zone
- * @uses text-indent
- * @uses overflow
- */
+
+
+
 @import url(https://fonts.googleapis.com/css?family=Playfair+Display:400i,700i);
 @import url(//hello.myfonts.net/count/30c503);
 @import url(//hello.myfonts.net/count/31cbeb);
@@ -25,87 +9,14 @@
   text-align: left;
   text-indent: -20000px;
 }
-/**
- * Apply position value, and 0 to 4 offset values
- * Offsets (length or `auto`) are treated similar to `padding` value
- * Any of offsets may be `null`, in that case it is counted but not used
- * @example .position(absolute, 5px, 2px)       // position: absolute, 5px for top and bottom, 2px for left and right
- * @example .position(relative, 5px, 2px, 3px)  // position: relative, top: 5px, bottom: 3px, 2px for left and right
- * @example .position(fixed, 5px, 2px, null)    // position: fixed, top: 5px, nothing for bottom, 2px for left and right
- * @example .position(static)                   // applies just `position: static` (without any offsets)
- */
-/**
- * Apply `position: absolute`, and 0 to 4 offset values
- * Offsets (length or `auto`) are treated similar to `padding` value
- * Any of offsets may be `null`, in that case it is counted but not used
- * @example .absolute(5px, 2px)       // applies 5px for top and bottom, 2px for left and right
- * @example .absolute(5px, 2px, 3px)  // applies 5px for top, 3px for bottom, 2px for left and right
- * @example .absolute(5px, 2px, null) // applies 5px for top, nothing for bottom, 2px for left and right
- * @example .absolute()               // applies just `position: absolute` (without any offsets)
- */
-/**
- * Apply `position: fixed`, and 0 to 4 offset values
- * Offsets (length or `auto`) are treated similar to `padding` value
- * Any of offsets may be `null`, in that case it is counted but not used
- * @example .fixed(5px, 2px)       // applies 5px for top and bottom, 2px for left and right
- * @example .fixed(5px, 2px, 3px)  // applies 5px for top, 3px for bottom, 2px for left and right
- * @example .fixed(5px, 2px, null) // applies 5px for top, nothing for bottom, 2px for left and right
- * @example .fixed()               // applies just `position: fixed` (without any offsets)
- */
-/**
- * Apply `position: relative`, and 0 to 4 offset values
- * Offsets (length or `auto`) are treated similar to `padding` value
- * Any of offsets may be `null`, in that case in is counted but not used
- * @example .relative(5px, 2px)       // applies 5px for top and bottom, 2px for left and right
- * @example .relative(5px, 2px, 3px)  // applies 5px for top, 3px for bottom, 2px for left and right
- * @example .relative(5px, 2px, null) // applies 5px for top, nothing for bottom, 2px for left and right
- * @example .relative()               // applies just `position: relative` (without any offsets)
- */
-/**
- * Applies parent and child size half-difference to CSS property provided
- * Value is rounded to NEAREST integer, then multiplied by factor (if provided)
- * @param {keyword} property CSS property name
- * @param {length} parent-size Greater (parent) size
- * @param {length} child-size Smaller (child) size
- * @param {number=1} [factor] Value multiplier, if needed
- * @example hdiff(margin-top, 34px, 16px)  // => margin-top: 8px
- * @example hdiff(margin-top, 34px, 17px)  // => margin-top: 9px
- * @example hdiff(top, 34px, 17px, -1)     // => top: -9px
- * @example hdiff(top, 34px, 17px)         // => top: 9px
- */
-/**
- * Applies parent and child size half-difference to CSS property provided
- * Value is rounded to BIGGER integer, then multiplied by factor (if provided)
- * @param {keyword} property CSS property name
- * @param {length} parent-size Greater (parent) size
- * @param {length} child-size Smaller (child) size
- * @param {number=1} [factor] Value multiplier, if needed
- * @example hdiff-ceil(margin-top, 34px, 16px)  // => margin-top: 8px
- * @example hdiff-ceil(margin-top, 34px, 17px)  // => margin-top: 9px
- * @example hdiff-ceil(top, 34px, 17px)         // => top: 9px
- * @example hdiff-ceil(top, 34px, 17px, -1)     // => top: -9px
- */
-/**
- * Applies parent and child size half-difference to CSS property provided
- * Value is rounded to SMALLER integer, then multiplied by factor (if provided)
- * @param {keyword} property CSS property name
- * @param {length} parent-size Greater (parent) size
- * @param {length} child-size Smaller (child) size
- * @param {number=1} [factor] Value multiplier, if needed
- * @example hdiff-floor(margin-top, 34px, 16px)  // => margin-top: 8px
- * @example hdiff-floor(margin-top, 34px, 17px)  // => margin-top: 8px
- * @example hdiff-floor(top, 34px, 17px)         // => top: 8px
- * @example hdiff-floor(top, 34px, 17px, -1)     // => top: -8px
- */
-/**
- * Binds block height to current width
- * "Height" is produced with setting percentage padding-bottom and zeroing actual height
- * Warning: the block MUST have box-sizing: content-box (default value for most elements)!
- * @see https://css-tricks.com/scaled-proportional-blocks-with-css-and-javascript/ (no JS actually needed)
- * @param {number} ratio Width/height ratio (e.g. 16/9, 1.5 etc.)
- * @uses height
- * @uses padding-bottom
- */
+
+
+
+
+
+
+
+
 @font-face {
   font-family: 'Playfair Display';
   font-weight: 400;
@@ -689,14 +600,9 @@ body.news {
     display: none;
   }
 }
-/* Mixins */
+
 .gallery {
-  /**
-     * @mixin Sets sizing for desktop gallery
-     * @param {number} item-width-unit-count Number of gallery width units (columns) per row
-     * @param {length} item-height Height of item
-     * @param {length} item-height Vertical and horizontal gaps/offsets between and around items
-     */
+  
 }
 @media screen and (min-width: 1024px) and (min-height: 600px) {
   .filter-gallery-wrapper .gallery {

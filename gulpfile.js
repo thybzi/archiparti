@@ -6,6 +6,7 @@ var gulp = require('gulp'),
     fs = require('fs-extra'),
     crypto = require('crypto'),
     less = require('gulp-less'),
+    stripCssComments = require('gulp-strip-css-comments'),
     postcss = require('gulp-postcss'),
     url = require('postcss-url'),
     byebye = require('css-byebye'),
@@ -47,6 +48,7 @@ gulp.task('css', ['clean-assets'], function (done) {
             console.log(err.toString());
             this.emit('end');
         }))
+        .pipe(stripCssComments())
         .pipe(postcss([
             url({
                 url: cssUrl
