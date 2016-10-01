@@ -391,6 +391,18 @@ body.news {
     width: 320px;
   }
 }
+.button {
+  display: inline-block;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 11px 23px 12px;
+  border: 2px solid #fafafa;
+  border-radius: 20px;
+  background-color: #df001c;
+  color: #fafafa;
+  font-size: 12px;
+  line-height: 17px;
+}
 .collaborate-block .image {
   display: block;
   -moz-box-sizing: border-box;
