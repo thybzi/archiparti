@@ -180,6 +180,11 @@ body.about {
 body.news {
   background-color: #b1eaff;
 }
+body.has-popup {
+  height: 100%;
+  overflow: hidden;
+}
+
 .anchor {
   display: block;
   position: relative;
