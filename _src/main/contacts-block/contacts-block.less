@@ -1,5 +1,195 @@
 @import '__';
+@import (reference) '../headline/%';
 
 .contacts-block {
-    display: none;
+
+
+    // Block main container
+    & {
+        position: relative;
+        background-color: @_c__white;
+        color: @_c__black;
+
+        @media @_l__desktop__media {
+            flex-grow: 1;
+            padding-top: 113px;
+            padding-left: @contacts-block__desktop__pad-left;
+            padding-bottom: 34px;
+        }
+
+        @media @_l__phone2__media {
+            padding-top: @contacts-block__phone__pattern__height + @contacts-block__phone2__pattern__offset-bottom;
+            padding-left: 40px;
+            padding-right: 45px;
+            padding-bottom: 40px;
+        }
+
+        @media @_l__phone1__media {
+            padding-top: @contacts-block__phone__pattern__height + @contacts-block__phone1__pattern__offset-bottom;
+            padding-left: 20px;
+            padding-right: 30px;
+            padding-bottom: 31px;
+        }
+
+        .header:not(.expanded) & {
+            display: none;
+        }
+
+        .header.expanded & {
+            display: block;
+        }
+    }
+
+
+    // Grater-like pattern on left or top side of the block
+    &::before {
+        content: '';
+        .grater-pattern();
+
+        @media @_l__desktop__media {
+            .absolute(0, null, 0, 0);
+            width: @contacts-block__desktop__pattern__width;
+        }
+
+        @media @_l__phone__media {
+            .absolute(0, 0, null);
+            height: @contacts-block__phone__pattern__height;
+        }
+    }
+
+
+    // Large teaser text
+    .headline {
+
+        @media @_l__desktop__media {
+            margin-left: 0;
+        }
+
+        // @todo common headline style?
+        @media @_l__phone1__media {
+            font-size: 26px;
+            line-height: 50px;
+        }
+    }
+
+
+    // Sub-block with contact information itself
+    .contacts {
+
+        @media @_l__desktop__media {
+            display: flex;
+            justify-content: space-between;
+            width: @headline__desktop__width;
+        }
+
+        @media @_l__phone__media {
+            font-size: 18px;
+            line-height: 48px;
+
+            .block-title {
+                display: none;
+            }
+        }
+
+        @media @_l__phone2__media {
+            margin-top: 50px;
+        }
+
+        @media @_l__phone1__media {
+            margin-top: 40px;
+        }
+    }
+
+
+    // Contacts item such as address or phone/email info
+    .contacts-item {
+
+        .phone {
+            font-weight: @_f__weight_bold;
+        }
+
+        .email {
+            display: table;
+            font-weight: @_f__weight_bold;
+            color: @_c__red2;
+            ._t__link-underline(2px, 90%);
+        }
+
+        @media @_l__desktop__media {
+            font-size: 14px;
+            line-height: 28px;
+
+            &:not(.address) {
+                width: 205px;
+            }
+
+            &.address {
+                width: 193px;
+            }
+
+            .block-title {
+                font-weight: @_f__weight_bold;
+                margin-bottom: 28px;
+            }
+        }
+
+        @media @_l__phone__media {
+
+            & + .contacts-item {
+                margin-top: 40px;
+            }
+        }
+    }
+
+
+    // Partner logos block on the bottom
+    .partners {
+        font-size: 0;
+
+        em {
+            display: inline-block;
+            margin-right: 18px;
+            vertical-align: middle;
+            color: fade(@_c__gray-dark, 40%);
+            font-size: 12px;
+            line-height: 20px;
+        }
+
+        ul {
+            display: inline-block;
+            vertical-align: middle;
+
+            li {
+                display: inline-block;
+                vertical-align: middle;
+
+                & + li {
+                    margin-left: 10px;
+                }
+
+                img {
+                    vertical-align: top;
+                    max-height: 100%;
+                }
+            }
+        }
+
+        @media @_l__desktop__media {
+            width: @headline__desktop__width;
+            margin-top: 124px;
+        }
+
+        @media @_l__phone2__media {
+            margin-top: 99px;
+        }
+
+        @media @_l__phone1__media {
+            margin-top: 49px;
+
+            ul {
+                display: block;
+                margin-top: 10px;
+            }
+        }
+    }
 }
