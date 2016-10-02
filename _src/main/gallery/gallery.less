@@ -122,6 +122,28 @@
     }
 
 
+    &.loose {
+
+        .item {
+
+            &.complex {
+
+                .caption {
+                    .absolute(30px, 30px, null);
+                    max-width: 240px;
+                    font-weight: @_f__weight_bold;
+                    font-size: 26px;
+                    line-height: 36px;
+                }
+
+                .link-action {
+                    .absolute(null, null, 34px, 30px);
+                }
+            }
+        }
+    }
+
+
     @media @_l__desktop__media {
 
         & {
@@ -139,31 +161,6 @@
             box-sizing: border-box;
             border-style: solid;
             border-color: transparent;
-
-            &.complex {
-
-                &:not(.double) {
-
-                    .caption {
-                        .absolute(30px, null, null, 25px);
-                        font-size: 20px;
-                        line-height: 26px;
-                        max-width: 160px;
-                        font-weight: @_f__weight_normal;
-                    }
-                }
-
-                &.double {
-
-                    .caption {
-                        .absolute(20px, null, null, 25px);
-                        font-size: 30px;
-                        line-height: 46px;
-                        max-width: 285px;
-                        font-weight: @_f__weight_bold;
-                    }
-                }
-            }
 
             &.event {
 
@@ -187,6 +184,34 @@
         // Common variation (4 columns)
         &:not(.loose) {
             .gallery > .desktop-sizing(4, 250px, 10px);
+
+            .item {
+
+                &.complex {
+
+                    &:not(.double) {
+
+                        .caption {
+                            .absolute(30px, null, null, 25px);
+                            font-size: 20px;
+                            line-height: 26px;
+                            max-width: 160px;
+                            font-weight: @_f__weight_normal;
+                        }
+                    }
+
+                    &.double {
+
+                        .caption {
+                            .absolute(20px, null, null, 25px);
+                            font-size: 30px;
+                            line-height: 46px;
+                            max-width: 285px;
+                            font-weight: @_f__weight_bold;
+                        }
+                    }
+                }
+            }
         }
 
         // Loose variation (3 columns)
@@ -208,19 +233,25 @@
             padding-right: @item-offset-x-value;
         }
 
+        &:not(.loose) {
+
+            .item {
+
+                &.complex {
+
+                    .caption {
+                        font-size: 24px;
+                        line-height: 38px;
+                    }
+                }
+            }
+        }
+
         .item {
             position: relative;
             border-width: 0 @item-gap-half;
             border-style: solid;
             border-color: transparent;
-
-            &.complex {
-
-                .caption {
-                    font-size: 24px;
-                    line-height: 38px;
-                }
-            }
 
             &.event {
 
