@@ -891,6 +891,54 @@ body.has-popup {
   line-height: 15px;
   font-weight: 900;
 }
+.gallery .item.complex .link-action::before {
+  margin-right: 18px;
+  vertical-align: top;
+}
+.gallery .item.complex .link-action.googleplus::before {
+  content: '\ea07';
+  font-family: 'icons';
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 14px;
+  line-height: 14px;
+}
+.gallery .item.complex .link-action.facebook::before {
+  content: '\ea06';
+  font-family: 'icons';
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 14px;
+  line-height: 14px;
+}
+.gallery .item.complex .link-action.pinterest::before {
+  content: '\ea09';
+  font-family: 'icons';
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 15px;
+  line-height: 15px;
+}
+.gallery .item.complex .link-action.linkedin::before {
+  content: '\ea08';
+  font-family: 'icons';
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 15px;
+  line-height: 15px;
+}
 .gallery .item.event .date {
   position: absolute;
   left: 32px;

@@ -65,6 +65,27 @@
                 font-size: 12px;
                 line-height: 15px;
                 font-weight: @_f__weight_black;
+
+                &::before {
+                    margin-right: 18px;
+                    vertical-align: top;
+                }
+
+                &.googleplus::before {
+                    ._icon > .use(@_i__social-googleplus, 14px);
+                }
+
+                &.facebook::before {
+                    ._icon > .use(@_i__social-facebook, 14px);
+                }
+
+                &.pinterest::before {
+                    ._icon > .use(@_i__social-pinterest, 15px);
+                }
+
+                &.linkedin::before {
+                    ._icon > .use(@_i__social-linkedin, 15px);
+                }
             }
         }
 
