@@ -1,0 +1,12 @@
+/**
+ * Apply linear-gradient-based solid underline
+ * @param {length=1px} [size] Line width
+ * @param {length=100%} [pos-y] Line vertical position (can be set in %, em, px etc.)
+ * @param {color=@black} [color] Line color
+ */
+._t__link-underline(@size: 1px, @pos-y: 100%, @color: @_c__black) {
+    background-image: linear-gradient(@color 50%, @color 50%);
+    background-repeat: repeat-x;
+    background-position: 0 @pos-y;
+    background-size: 100% @size;
+}
