@@ -51,7 +51,7 @@ head_style2: >
 {% endcapture %}{% assign text=text | replace:'   ','' %}
 {% include text-block.html text=text %}
 
-{% include gallery.html loose=true %}
+{% include gallery.html set="beta" loose=true %}
 
 {% capture text1 %}
     To put this idea into action, we provide a cloud-based software solution and standardized construction management
@@ -69,4 +69,4 @@ head_style2: >
 {% endcapture %}{% assign text2=text2 | replace:'   ','' %}
 {% include text-columns.html text1=text1 text2=text2 %}
 
-{% include gallery.html %}
+{% include gallery.html set="gamma" %}

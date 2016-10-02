@@ -35,7 +35,7 @@ body_class: about
     {% include text-block.html text=text %}
 
     {% include intended-teaser.html %}
-    {% include gallery.html loose=true %}
+    {% include gallery.html set="beta" loose=true %}
 {% endcapture %}
 {% include page-section.html content=section_content %}
 
@@ -54,6 +54,6 @@ body_class: about
         to [hello@archiparti.com](mailto:hello@archiparti.com)
     {% endcapture %}
     {% include text-block.html text=text %}
-    {% include gallery.html %}
+    {% include gallery.html set="alpha" %}
 {% endcapture %}
 {% include page-section.html content=section_content %}
