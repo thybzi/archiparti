@@ -5,41 +5,46 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
-   id="svg2"
    version="1.1"
-   viewBox="0 0 15.958299 14.109696"
-   height="14.109696"
-   width="15.958299">
+   id="svg2"
+   height="14.109402"
+   width="15.958508">
+  <defs
+     id="defs18" />
   <metadata
-     id="metadata15">
-    <rdf:RDF>
-      <cc:Work
-         rdf:about="">
-        <dc:format>image/svg+xml</dc:format>
-        <dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title>like</dc:title>
-      </cc:Work>
-    </rdf:RDF>
-  </metadata>
+     id="metadata15">image/svg+xmllike<rdf:RDF>
+  <cc:Work
+     rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type
+       rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+    <dc:title>like</dc:title>
+  </cc:Work>
+</rdf:RDF>
+</metadata>
   <!-- Generator: sketchtool 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
   <title
-     id="title4">like</title>
+     id="title5">like</title>
   <desc
-     id="desc6">Created with sketchtool.</desc>
-  <defs
-     id="defs8" />
+     id="desc7">Created with sketchtool.</desc>
   <g
-     transform="translate(-1.0205195,-3.0402766e-4)"
-     style="fill:none;fill-rule:evenodd;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round"
-     id="Page-1">
+     transform="translate(-1.0208613,2.1532765e-5)"
+     style="fill:#000000;fill-opacity:1;stroke:none;stroke-opacity:1"
+     id="g9">
+    <title
+       id="title11">Layer 1</title>
     <g
-       style="stroke:#000000;stroke-width:2"
-       transform="translate(-32,-79)"
-       id="Menu_full_screen">
-      <path
-         d="m 40.998096,92.11 c 0.743558,0 9.715297,-7.655105 6.180404,-10.847086 -3.534893,-3.191981 -6.180404,0.803488 -6.180404,0.803488 0,0 -2.656612,-4.055593 -6.180404,-0.803488 C 31.2939,84.51502 40.254538,92.109999 40.998096,92.11 Z"
-         id="icon_myloves" />
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+       id="Page-1">
+      <g
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;stroke-opacity:1"
+         id="Menu_full_screen">
+        <path
+           style="clip-rule:nonzero;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1"
+           id="icon_myloves"
+           d="M 5.16602,0.02148 C 4.18293,0.1233 3.14176,0.60159 2.13867,1.52734 0.95994,2.61519 0.81468,4.23665 1.23633,5.62109 1.65798,7.00553 2.54131,8.3305 3.53516,9.54102 c 0.99384,1.21052 2.10652,2.29182 3.03711,3.08984 0.46529,0.39901 0.88178,0.72612 1.23242,0.96875 0.17531,0.12131 0.33327,0.22174 0.49219,0.30664 0.15891,0.0849 0.2291,0.20312 0.70117,0.20313 0.47544,0 0.54604,-0.11955 0.70508,-0.20508 0.15903,-0.08554 0.31484,-0.18647 0.49023,-0.3086 0.35079,-0.24424 0.76881,-0.5733 1.23437,-0.97461 C 12.35886,11.81847 13.4727,10.73147 14.4668,9.51758 15.4609,8.30369 16.34438,6.9775 16.76563,5.5957 17.18687,4.21391 17.03705,2.59374 15.84961,1.52148 13.83603,-0.29676 11.65032,-0.15245 10.28516,0.58984 9.72869,0.89241 9.34791,1.26253 9.00391,1.60156 8.65861,1.25625 8.27278,0.87729 7.71094,0.56836 7.02691,0.19224 6.1491,-0.08033 5.16602,0.02148 Z m 7.45312,1.9668 c 0.52165,0.05019 1.12801,0.33071 1.88867,1.01758 0.58,0.52374 0.63375,1.05653 0.34375,2.00781 -0.29,0.95128 -1.03172,2.13745 -1.93164,3.23633 -0.89992,1.09888 -1.94909,2.12496 -2.79883,2.85742 -0.42486,0.36623 -0.80194,0.6608 -1.07031,0.84766 -0.02456,0.0171 -0.03201,0.01796 -0.05469,0.0332 C 8.97398,11.9735 8.96725,11.97161 8.94336,11.95508 8.6754,11.76966 8.29927,11.47711 7.875,11.11328 7.02646,10.38562 5.97886,9.36622 5.08008,8.27148 4.18129,7.17675 3.43908,5.99333 3.14844,5.03906 2.8578,4.08479 2.91293,3.53625 3.49609,2.99805 4.2549,2.29775 4.86695,2.06413 5.37305,2.01172 5.87914,1.95931 6.32745,2.091 6.74805,2.32227 7.58925,2.78481 8.16211,3.61523 8.16211,3.61523 a 1.0001,1.0001 0 0 0 1.66992,0.0039 c 0,0 0.56689,-0.81598 1.4082,-1.27343 0.42066,-0.22873 0.85726,-0.40762 1.37891,-0.35743 l 0,1e-5 z"
+           stroke-miterlimit="4" />
+      </g>
     </g>
   </g>
 </svg>

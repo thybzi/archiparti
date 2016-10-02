@@ -39,7 +39,7 @@
   font-family: 'icons';
   font-weight: 400;
   font-style: normal;
-  src: local('☺︎'), url(../fonts/icons.woff?v=e6d492e26b110d46) format('woff'), url(../fonts/icons.ttf?v=3aa2a2bcb5a9a395) format('truetype');
+  src: local('☺︎'), url(../fonts/icons.woff?v=101affc5cb0d0251) format('woff'), url(../fonts/icons.ttf?v=a010b64a88053a99) format('truetype');
 }
 html, body {
   margin: 0;

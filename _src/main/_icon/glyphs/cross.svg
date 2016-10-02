@@ -5,13 +5,12 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
-   id="svg2"
    version="1.1"
-   viewBox="0 0 13.958007 13.958008"
-   height="13.958008"
-   width="13.958007">
+   id="svg2"
+   height="13.95801"
+   width="13.958">
   <metadata
-     id="metadata17">
+     id="metadata21">
     <rdf:RDF>
       <cc:Work
          rdf:about="">
@@ -22,32 +21,32 @@
       </cc:Work>
     </rdf:RDF>
   </metadata>
+  <defs
+     id="defs19" />
   <!-- Generator: sketchtool 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
   <title
      id="title4">cross</title>
   <desc
      id="desc6">Created with sketchtool.</desc>
-  <defs
-     id="defs8" />
   <g
-     transform="translate(-0.16017821,-0.02099621)"
-     style="fill:none;fill-rule:evenodd;stroke:none;stroke-width:1"
-     id="Page-1">
+     id="g8">
+    <title
+       id="title10">Layer 1</title>
     <g
-       style="fill:#000000"
-       transform="translate(-33,-33)"
-       id="Menu_full_screen_mobile">
+       style="fill:none;fill-rule:evenodd"
+       id="Page-1">
       <g
-         transform="translate(32,32)"
-         id="Group">
-        <path
-           transform="matrix(0.70710678,0.70710678,-0.70710678,0.70710678,8.0407655,-3.412125)"
-           id="Line"
-           d="m 16.594769,9 c 0.552285,0 1,-0.4477152 1,-1 0,-0.5522848 -0.447715,-1 -1,-1 L -0.31640625,7 C -0.868691,7 -1.3164062,7.4477152 -1.3164062,8 c 0,0.5522848 0.4477152,1 0.99999995,1 L 16.594769,9 Z" />
-        <path
-           transform="matrix(0.70710678,-0.70710678,0.70710678,0.70710678,-3.272943,8.0984165)"
-           id="Line-Copy-5"
-           d="m 16.594769,9 c 0.552285,0 1,-0.4477152 1,-1 0,-0.5522848 -0.447715,-1 -1,-1 L -0.31640625,7 C -0.868691,7 -1.3164062,7.4477152 -1.3164062,8 c 0,0.5522848 0.4477152,1 0.99999995,1 L 16.594769,9 Z" />
+         style="fill:#000000"
+         id="Menu_full_screen_mobile">
+        <g
+           id="Group">
+          <path
+             id="Line"
+             d="m 12.2509,13.66511 c 0.39052,0.39052 1.02369,0.39052 1.41421,0 0.39052,-0.39052 0.39052,-1.02369 0,-1.41421 L 1.7071,0.29289 c -0.39052,-0.39052 -1.02369,-0.39052 -1.41421,0 -0.39052,0.39052 -0.39052,1.02369 0,1.41421 L 12.2509,13.66511 Z" />
+          <path
+             id="Line-Copy-5"
+             d="m 13.66511,1.70711 c 0.39052,-0.39052 0.39052,-1.02369 0,-1.41421 -0.39052,-0.39052 -1.02369,-0.39052 -1.41421,0 L 0.29289,12.25091 c -0.39052,0.39052 -0.39052,1.02369 0,1.41421 0.39052,0.39052 1.02369,0.39052 1.41421,0 L 13.66511,1.70711 Z" />
+        </g>
       </g>
     </g>
   </g>
