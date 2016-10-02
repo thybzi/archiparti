@@ -1,0 +1,11 @@
+{% capture devnull %}
+    {% assign angle_unit = "deg" %}
+    {% assign angle_modern = include.value | split:angle_unit | first %}
+    {% assign angle_obsolete = 450 | minus:angle_modern %}
+    {% assign value_residual = include.value | split:angle_unit | last %}
+    {% assign value_modern = angle_modern | append:angle_unit | append:value_residual %}
+    {% assign value_obsolete = angle_obsolete | append:angle_unit | append:value_residual %}
+{% endcapture %}{% assign devnull = nil %}
+background-image: -webkit-linear-gradient({{ value_obsolete }});
+background-image: -o-linear-gradient({{ value_obsolete }});
+background-image: linear-gradient({{ value_modern }});
