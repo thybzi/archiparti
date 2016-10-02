@@ -1,5 +1,9 @@
 <div class="menu">
-    <a class="toggle-link" href="#"></a>
+    <a class="toggle-link" href="#" onclick="
+        document.body.classList.toggle('has-popup');
+        this.parentNode.parentNode.parentNode.classList.toggle('expanded');
+        return false;
+    "></a>
     <div class="social-block">
         <a class="like" href="#">Love us</a>
         <ul class="social-links">
