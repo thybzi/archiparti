@@ -142,7 +142,7 @@ body::before {
   left: 0;
   right: 0;
   top: 0;
-  z-index: 50;
+  z-index: 111;
   height: 0;
   border-bottom: 4px solid #000;
 }
@@ -152,7 +152,7 @@ body::after {
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 50;
+  z-index: 111;
   height: 0;
   border-top: 4px solid #000;
 }
@@ -1375,7 +1375,7 @@ body.has-popup {
 }
 .subscribe-block {
   display: block;
-  z-index: 100;
+  z-index: 97;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   height: 80px;
@@ -1473,7 +1473,7 @@ body.has-popup {
   position: fixed;
   left: 30px;
   bottom: 30px;
-  z-index: 101;
+  z-index: 98;
   width: 30px;
   height: 30px;
   border-radius: 50%;
