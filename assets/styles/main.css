@@ -1743,11 +1743,10 @@ body.has-popup {
   display: table;
   margin-top: 28px;
 }
-.menu .intended {
+.menu .intended small {
   font-style: italic;
 }
 .menu .intended strong {
-  font-style: normal;
   font-weight: normal;
 }
 @media screen and (min-width: 1024px) and (min-height: 600px) {
