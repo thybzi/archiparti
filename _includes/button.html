@@ -1,2 +1,37 @@
-{% if include.url %}{% assign url = include.url %}{% else %}{% assign url = '#' %}{% endif -%}
-<a href="{{ url }}" class="button {{ include.subclass }}" {{ include.attrs }}>{{ include.text }}</a>
+{% capture devnull %}
+
+    {% if include.tagname %}
+        {% assign tagname = include.tagname %}
+    {% elsif include.url %}
+        {% assign tagname = 'a' %}
+    {% elsif include.type %}
+        {% assign tagname = 'button' %}
+    {% else %}
+        {% assign tagname = 'span' %}
+    {% endif %}
+
+    {% assign attrs = '' %}
+
+    {% assign class_attr = 'class="button' %}
+    {% if include.subclass %}
+        {% assign class_attr = class_attr | append:' ' | append:include.subclass %}
+    {% endif %}
+    {% assign class_attr = class_attr | append:'"' %}
+    {% assign attrs = attrs | append:class_attr %}
+
+    {% if include.url %}
+        {% assign href_attr = 'href="' | append:include.url | append:'" ' %}
+        {% assign attrs = attrs | prepend:href_attr %}
+    {% endif %}
+
+    {% if include.type %}
+        {% assign type_attr = 'type="' | append:include.type | append:'" ' %}
+        {% assign attrs = attrs | prepend:type_attr %}
+    {% endif %}
+
+    {% if include.attrs %}
+        {% assign attrs = attrs | append:' ' | append:include.attrs %}
+    {% endif %}
+
+{% endcapture %}{% assign devnull = nil -%}
+<{{ tagname }} {{ attrs }}>{{ include.text }}</{{ tagname }}>
