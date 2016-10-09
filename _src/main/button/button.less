@@ -3,11 +3,25 @@
 .button {
     display: inline-block;
     box-sizing: border-box;
-    padding: @button__pad-top @button__pad-x @button__pad-bottom;
-    border: 2px solid @_c__gray-light;
-    border-radius: @button__rounding;
-    background-color: @_c__red1;
-    color: @_c__gray-light;
-    font-size: @button__font-size;
-    line-height: @button__line-height;
+    border: 1px solid @button__stroke-color;
+    text-align: center;
+    color: @button__text-color;
+    font-weight: @_f__weight_black;
+    cursor: pointer;
+
+    &:not(.large) {
+        .button__size(default);
+    }
+
+    &.large {
+        .button__size(large);
+    }
+
+    &:not(.dark) {
+        background-color: @button_default__bg-color;
+    }
+
+    &.dark {
+        background-color: @button_dark__bg-color;
+    }
 }

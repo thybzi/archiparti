@@ -400,13 +400,62 @@ body.has-popup {
   display: inline-block;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 11px 23px 12px;
-  border: 2px solid #fafafa;
+  border: 1px solid #d0021b;
+  text-align: center;
+  color: #fff;
+  font-weight: 900;
+  cursor: pointer;
+}
+.button:not(.large) {
+  padding-left: 29px;
+  padding-right: 29px;
+  padding-top: 11px;
+  padding-bottom: 12px;
   border-radius: 20px;
-  background-color: #df001c;
-  color: #fafafa;
   font-size: 12px;
   line-height: 17px;
+}
+.button.large {
+  padding-left: 29px;
+  padding-right: 29px;
+  padding-top: 17px;
+  padding-bottom: 17px;
+  border-radius: 30px;
+  font-size: 14px;
+  line-height: 26px;
+}
+.button:not(.dark) {
+  background-color: #f4001e;
+}
+.button.dark {
+  background-color: #e2001c;
+}
+.close-link {
+  display: block;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  color: #000;
+  overflow: hidden;
+  text-align: left;
+  text-indent: -20000px;
+}
+.close-link::after {
+  content: '\ea02';
+  font-family: 'icons';
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 14px;
+  line-height: 14px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 13px;
+  text-align: center;
+  text-indent: 0;
 }
 .collaborate-block .image {
   display: block;
@@ -1739,9 +1788,15 @@ body.has-popup {
     line-height: 75px;
   }
 }
-.menu .submit-project-link {
-  display: table;
+.menu .button-wrapper {
   margin-top: 28px;
+}
+.menu .button-wrapper .button {
+  border-width: 2px;
+  border-color: #fafafa;
+  vertical-align: top;
+  background-color: #df001c;
+  color: #fafafa;
 }
 .menu .intended small {
   font-style: italic;
