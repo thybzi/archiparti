@@ -1,4 +1,4 @@
-{% assign items = site.gallery_items | where:"set",include.set | sort:"order" %}
+{% assign items = site.gallery_items | where:"set",include.set | sort:"order" -%}
 <div class="gallery {% if include.loose %}loose{% endif %} {% if include.mobile_column %}mobile-column{% endif %}">
 
     <ul class="list">

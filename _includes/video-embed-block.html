@@ -10,7 +10,7 @@
         {% assign formats = 'webm:video/webm|ogv:video/ogg|mp4:video/mp4|3gp:video/3gp' %}
     {% endif %}
     {% assign formats = formats | split:'|' %}
-{% endcapture %}{% assign devnull = nil %}
+{% endcapture %}{% assign devnull = nil -%}
 <div class="video-embed-block">
     <div class="player ratio_{{ ratio }}">
         <video class="embedded-content" onended="this.parentNode.classList.remove('playing');">

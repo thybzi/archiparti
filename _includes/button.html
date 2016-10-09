@@ -1,2 +1,2 @@
-{% if include.url %}{% assign url = include.url %}{% else %}{% assign url = '#' %}{% endif %}
+{% if include.url %}{% assign url = include.url %}{% else %}{% assign url = '#' %}{% endif -%}
 <a href="{{ url }}" class="button {{ include.subclass }}" {{ include.attrs }}>{{ include.text }}</a>

@@ -1,4 +1,4 @@
-{% if include.tagname %}{% assign tagname = include.tagname %}{% else %}{% assign tagname = 'div' %}{% endif %}
+{% if include.tagname %}{% assign tagname = include.tagname %}{% else %}{% assign tagname = 'div' %}{% endif -%}
 <{{ tagname }} class="headline"{% if include.order %} data-prefix="0{{ include.order }}"{% endif %}>
     {{ include.text | strip | remove:'    ' | markdownify | remove:'<p>' | remove:'</p>' }}
 </{{ tagname }}>

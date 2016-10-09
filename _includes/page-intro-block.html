@@ -1,7 +1,7 @@
 {% capture devnull %}
     {% if include.title %}{% assign title = include.title %}{% else %}{% assign title = page.title %}{% endif %}
     {% if include.text %}{% assign text = include.text %}{% else %}{% assign text = page.intro_text %}{% endif %}
-{% endcapture %}{% assign devnul = nil %}
+{% endcapture %}{% assign devnul = nil -%}
 <div class="page-intro-block {% if include.with_collaborate %}with-collaborate{% endif %}">
     {% include context-title.html text=title %}
     {% include headline.html text=text %}
