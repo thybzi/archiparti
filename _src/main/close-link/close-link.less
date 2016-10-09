@@ -1,0 +1,18 @@
+@import '__';
+
+.close-link {
+    display: block;
+    position: relative;
+    width: @close-link__size;
+    height: @close-link__size;
+    color: @_c__black;
+    .hide-text();
+
+    &::after {
+        ._icon > .use(@_i__cross, @close-link__icon-size);
+        .absolute(null, 0);
+        .hdiff(top, @close-link__size, @close-link__icon-size);
+        text-align: center;
+        text-indent: 0; // overriding negative value by .hide-text()
+    }
+}

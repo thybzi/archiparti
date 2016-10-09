@@ -1,0 +1,27 @@
+<form class="form recover">
+
+    <div class="form-content-wrapper">
+        <div class="form-content">
+
+            <h2 class="form-title">Forgot password</h2>
+            <div class="form-text">
+                <a href="#" onclick="return showForm('join')">Don’t have</a> an account?
+            </div>
+
+            <ol class="form-data">
+                <li class="form-data-item">
+                    {% include input.html placeholder="Email" type="email" %}
+                    <a href="#" onclick="return showForm('login')">Back to login</a>
+                </li>
+            </ol>
+
+            <div class="form-button-wrapper">
+                {% include button.html type="submit" subclass="large" text="Recover" %}
+            </div>
+
+        </div>
+    </div>
+
+    {% include close-link.html onclick="return hideForm('recover')" %}
+
+</form>

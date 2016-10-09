@@ -1,0 +1,242 @@
+@import '__';
+@import '../input/__';
+
+.form {
+    .fixed(0);
+    z-index: @_z__form;
+    background-color: @_c__gray-light;
+    -webkit-overflow-scrolling: touch;
+    overflow-y: scroll;
+    border-left: @_l__viewport-stroke;
+    border-right: @_l__viewport-stroke;
+
+
+    // Wrapper for aligning inner content
+    &-content-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100%;
+    }
+
+    // Inner form content
+    &-content {
+
+        @media @_l__desktop__media {
+            flex: @form__desktop__content__width 0 0;
+            padding-top: @form__desktop__content__offset-top;
+            padding-bottom: @form__desktop__content__offset-bottom;
+        }
+
+        @media @_l__phone2__media {
+            flex: @form__phone2__content__width 0 0;
+            padding-top: @form__phone2__content__offset-top;
+            padding-bottom: @form__phone2__content__offset-bottom;
+        }
+
+        @media @_l__phone1__media {
+            flex: @form__phone1__content__width 0 0;
+            padding-top: @form__phone1__content__offset-top;
+            padding-bottom: @form__phone1__content__offset-bottom;
+        }
+    }
+
+
+    // Form title
+    &-title {
+        text-align: center;
+
+        @media @_l__desktop__media {
+            font-size: 42px;
+            line-height: 42px;
+        }
+
+        @media @_l__phone__media {
+            font-size: 30px;
+            line-height: 30px;
+        }
+    }
+
+
+    // Small text below the title
+    &-text {
+        text-align: center;
+        @input__text-style();
+
+        a {
+            color: @_c__red2;
+        }
+
+        @media @_l__desktop__media {
+            margin-top: 7px;
+        }
+
+        @media @_l__phone__media {
+            margin-top: 1px;
+        }
+    }
+
+
+    // Form inputs block
+    &-data {
+
+        &-item {
+            position: relative;
+
+            a {
+                .absolute(@input__pad-y, @input__pad-x, null, null);
+                color: @_c__red2;
+                @input__text-style();
+            }
+        }
+
+
+        @media @_l__desktop__media {
+            margin-top: 38px;
+
+            &-item {
+
+                &:not(.name) {
+
+                    .input {
+                        width: 100%;
+                    }
+                }
+
+                &.name {
+                    display: flex;
+                    justify-content: space-between;
+
+                    .input {
+                        flex: 179px 0 0;
+                    }
+                }
+
+                & + & {
+                    margin-top: 20px;
+                }
+            }
+        }
+
+        @media @_l__phone__media {
+
+            &-item {
+
+                .input {
+                    width: 100%;
+                }
+            }
+        }
+
+        @media @_l__phone2__media {
+            margin-top: 58px;
+
+            &-item {
+
+                & + &,
+                .input + .input {
+                    margin-top: 40px;
+                }
+            }
+        }
+
+        @media @_l__phone1__media {
+            margin-top: 38px;
+
+            &-item {
+
+                & + &,
+                .input + .input {
+                    margin-top: 25px;
+                }
+            }
+        }
+    }
+
+
+    // Wrapper for submit buttons
+    &-button-wrapper {
+        text-align: center;
+
+        @media @_l__desktop__media,
+        @_l__phone2__media {
+            margin-top: 96px;
+        }
+
+        @media @_l__phone1__media {
+            margin-top: 46px;
+        }
+
+        .button {
+            vertical-align: top;
+
+            small {
+                font-weight: normal;
+                font-style: italic;
+            }
+
+            strong {
+                font-weight: inherit;
+            }
+        }
+
+        &.coupled {
+            display: flex;
+
+            .button {
+                padding-left: 0;
+                padding-right: 0;
+
+                &:not(:last-child) {
+                    border-top-right-radius: 0;
+                    border-bottom-right-radius: 0;
+                }
+
+                &:not(:first-child) {
+                    border-left-width: 0;
+                    border-top-left-radius: 0;
+                    border-bottom-left-radius: 0;
+                }
+            }
+
+            @media @_l__desktop__media {
+                justify-content: center;
+
+                .button {
+                    flex: 179px 0 0;
+                }
+            }
+
+            @media @_l__phone__media {
+
+                .button {
+                    flex-grow: 1;
+
+                    small {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+
+    // Form close link
+    // @todo bind right/top to some reliable values
+    .close-link {
+
+        @media @_l__desktop__media {
+            .fixed(27px, @_l__desktop__content-offset-x, null, null);
+        }
+
+        @media @_l__phone__media {
+            .fixed(16px, 16px, null, null);
+        }
+    }
+
+
+    // Form is only visible when expanded
+    &:not(.expanded) {
+        display: none;
+    }
+}

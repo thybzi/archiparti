@@ -1,0 +1,13 @@
+@import '__';
+
+.input {
+    padding: @input__pad-y @input__pad-x;
+    border-bottom: @input__underline-size solid @input__underline-color;
+    background-color: @_c__gray-light;
+    color: @input__text-color;
+    @input__text-style();
+
+    &::placeholder {
+        color: @input__placeholder-color;
+    }
+}

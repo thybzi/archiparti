@@ -10,8 +10,60 @@
 
     function toggleMenu() {
         getHeader().classList.toggle(C_EXPANDED); // actually, header is toggled
-        document.body.classList.toggle('has-popup');
+        updatePopupStatus();
         return false;
+    }
+
+    function hideMenu() {
+        getHeader().classList.remove(C_EXPANDED); // actually, header is hidden
+        updatePopupStatus();
+        return false;
+    }
+
+    function showForm(className) {
+        var form = getForm(className);
+        if (form) {
+            hideMenu();
+            hideForm(C_EXPANDED, true);
+            getForm(className).classList.add(C_EXPANDED);
+            updatePopupStatus(true);
+        }
+        return false;
+    }
+
+    function hideForm(className, dontUpdateStatus) {
+        var form;
+        className = className || C_EXPANDED;
+        form = getForm(className);
+        if (form) {
+            form.classList.remove(C_EXPANDED);
+            if (!dontUpdateStatus) {
+                updatePopupStatus(false);
+            }
+        }
+        return false;
+    }
+
+    function getForm(className) {
+        return document.querySelector('.form.' + className);
+    }
+
+    function getHeader() {
+        return document.querySelector('.header');
+    }
+
+    function updatePopupStatus(formStatus) {
+        var menuStatus,
+            status,
+            page;
+        if (typeof formStatus === 'undefined') {
+            formStatus = (getForm(C_EXPANDED) !== null);
+        }
+        menuStatus = getHeader().classList.contains(C_EXPANDED);
+        status = (formStatus || menuStatus);
+        page = document.body;
+        page.classList[status ? 'add' : 'remove']('has-popup');
+        page.classList[formStatus ? 'add' : 'remove']('has-form');
     }
 
 </script>

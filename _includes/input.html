@@ -1,0 +1,2 @@
+{% if include.type %}{% assign type = include.type %}{% else %}{% assign type = 'text' %}{% endif -%}
+<input type="{{ type }}" class="input" placeholder="{{ include.placeholder }}">

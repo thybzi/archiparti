@@ -1,0 +1,40 @@
+<form class="form join">
+
+    <div class="form-content-wrapper">
+        <div class="form-content">
+
+            <h2 class="form-title">Join!</h2>
+            <div class="form-text">
+                Already have an <a href="#" onclick="return showForm('login')">account?</a>
+            </div>
+
+            <ol class="form-data">
+                <li class="form-data-item name">
+                    {% include input.html placeholder="First Name" %}
+                    {% include input.html placeholder="Last Name" %}
+                </li>
+                <li class="form-data-item">
+                    {% include input.html placeholder="Email" type="email" %}
+                </li>
+                <li class="form-data-item">
+                    {% include input.html placeholder="Password" type="password" %}
+                </li>
+            </ol>
+
+            <div class="form-button-wrapper coupled">
+                {% include button.html type="submit" subclass="large" text="
+                    <small>I am</small>
+                    <strong>Project Owner</strong>
+                " %}
+                {% include button.html type="submit" subclass="large dark" text="
+                    <small>I am</small>
+                    <strong>Designer</strong>
+                " %}
+            </div>
+
+        </div>
+    </div>
+
+    {% include close-link.html onclick="return hideForm('join')" %}
+
+</form>
