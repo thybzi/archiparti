@@ -212,6 +212,7 @@ body.has-popup {
 }
 .auth-block {
   position: fixed;
+  font-size: 0;
   z-index: 101;
   text-align: right;
 }
