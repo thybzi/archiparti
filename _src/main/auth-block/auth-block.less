@@ -4,25 +4,20 @@
     .fixed();
     z-index: @_z__auth-block;
     text-align: right;
-    font-size: @auth-block__font-size;
-    line-height: @auth-block__line-height;
 
-    .login-link,
-    .join-link {
-        display: inline-block;
+    .button {
         vertical-align: top;
-        padding-top: @auth-block__text-offset-top;
-        text-align: center;
-    }
 
-    .join-link {
-        box-sizing: border-box;
-        height: @auth-block__height;
-        background-color: @_c__red2;
-        border: 1px solid #d0021b;
-        border-radius: @auth-block__item-rounding;
-        color: @_c__white;
-        font-weight: @_f__weight_black;
+        &:not(.large) {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        .login-link {
+            border-color: transparent;
+            background-color: transparent;
+            color: @_c__black;
+        }
     }
 
 

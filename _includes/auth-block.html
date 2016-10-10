@@ -1,4 +1,4 @@
 <div class="auth-block">
-    <a href="#" class="login-link" onclick="return showForm('login')">Login</a>
-    <a href="#" class="join-link" onclick="return showForm('join')">Join</a>
+    {% include button.html url="#" subclass="login-link" onclick="return showForm('login')" text="Login" %}
+    {% include button.html url="#" subclass="join-link" onclick="return showForm('join')" text="Join" %}
 </div>

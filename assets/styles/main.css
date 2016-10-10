@@ -214,24 +214,18 @@ body.has-popup {
   position: fixed;
   z-index: 101;
   text-align: right;
-  font-size: 12px;
-  line-height: 17px;
 }
-.auth-block .login-link, .auth-block .join-link {
-  display: inline-block;
+.auth-block .button {
   vertical-align: top;
-  padding-top: 9px;
-  text-align: center;
 }
-.auth-block .join-link {
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  height: 40px;
-  background-color: #f4001e;
-  border: 1px solid #d0021b;
-  border-radius: 20px;
-  color: #fff;
-  font-weight: 900;
+.auth-block .button:not(.large) {
+  padding-left: 0;
+  padding-right: 0;
+}
+.auth-block .button .login-link {
+  border-color: transparent;
+  background-color: transparent;
+  color: #000;
 }
 @media screen and (min-width: 1024px) and (min-height: 600px) {
   .auth-block {
