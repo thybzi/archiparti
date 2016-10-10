@@ -23,8 +23,8 @@
 
 
     @media @_l__desktop__media {
-        top: 31px;
-        right: 30px;
+        top: @auth-block__desktop__offset-top;
+        right: @auth-block__desktop__offset-right;
 
         .join-link {
             width: 80px;
@@ -47,7 +47,7 @@
 
 
     @media @_l__phone__media {
-        top: 20px;
+        top: @auth-block__phone__offset-top;
 
         .join-link {
             width: 60px;
@@ -58,12 +58,12 @@
         }
     }
 
-    @media @_l__phone1__media {
-        right: 10px;
+    @media @_l__phone2__media {
+        right: @auth-block__phone2__offset-right;
     }
 
-    @media @_l__phone2__media {
-        right: 30px;
+    @media @_l__phone1__media {
+        right: @auth-block__phone1__offset-right;
     }
 
 
