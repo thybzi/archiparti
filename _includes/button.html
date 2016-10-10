@@ -29,6 +29,11 @@
         {% assign attrs = attrs | prepend:type_attr %}
     {% endif %}
 
+    {% if include.onclick %}
+        {% assign onclick_attr = ' onclick="' | append:include.onclick | append:'"' %}
+        {% assign attrs = attrs | append:onclick_attr %}
+    {% endif %}
+
     {% if include.attrs %}
         {% assign attrs = attrs | append:' ' | append:include.attrs %}
     {% endif %}
